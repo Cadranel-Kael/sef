@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1fc607ac-3848-4ded-8e13-c449b651399d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/application.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/environments/development.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/environments/staging.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phpcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/mu-plugins/bedrock-autoloader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/plugins/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/app/Providers/ThemeServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/app/View/Composers/App.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/app/View/Composers/Comments.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/app/View/Composers/Post.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/app/filters.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/app/setup.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/bud.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/composer.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/jsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/fonts/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/images/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/images/logo-sef.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/scripts/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/scripts/editor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/scripts/filters/button.filter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/styles/app.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/styles/editor.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/styles/utils/_sr.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/views/404.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/views/components/alert.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/views/forms/search.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/views/front-page.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/views/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/views/page.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/views/partials/comments.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/views/partials/content-page.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/views/partials/content-search.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/views/partials/content-single.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/views/partials/content.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/views/partials/entry-meta.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/views/partials/nav.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/views/partials/page-header.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/views/search.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/views/sections/footer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/views/sections/header.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/views/sections/sidebar.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/views/single.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/resources/views/template-custom.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/screenshot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/theme.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/themes/sef/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app/uploads/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/wp-config.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-cli.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerConfigs">
+    <option name="configs">
+      <option value="$PROJECT_DIR$/web/app/mu-plugins/bedrock-disallow-indexing/composer.json" />
+      <option value="$PROJECT_DIR$/web/wp/wp-includes/sodium_compat/composer.json" />
+      <option value="$PROJECT_DIR$/web/app/themes/sef/composer.json" />
+    </option>
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.2">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/oscarotero/env" />
+      <path value="$PROJECT_DIR$/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/vendor/roots/wordpress-core-installer" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/roots/wp-password-bcrypt" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/roots/bedrock-autoloader" />
+      <path value="$PROJECT_DIR$/vendor/roots/wp-config" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/squizlabs/php_codesniffer" />
+      <path value="$PROJECT_DIR$/web/app/themes/sef/vendor/composer" />
+      <path value="$PROJECT_DIR$/web/app/themes/sef/vendor/laravel/pint" />
+    </include_path>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2elrxtdrjOsBLBT8jeGF8Ug2gpl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.laravel-idea.search-composer-json": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/kael-cadranel/HEPL-BAC_2/sef/web/app/themes/sef/resources/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/app/themes/sef/resources/images" />
+      <recent name="$PROJECT_DIR$/web/app/themes/sef" />
+      <recent name="$PROJECT_DIR$/web/app/themes" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-php-predefined-ba97393d7c68-b4dcf6bb9de9-com.jetbrains.php.sharedIndexes-PS-233.13135.108" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1fc607ac-3848-4ded-8e13-c449b651399d" name="Changes" comment="" />
+      <created>1712490255386</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712490255386</updated>
+      <workItem from="1712490256439" duration="1478000" />
+      <workItem from="1712492831271" duration="1000" />
+      <workItem from="1712493898087" duration="4288000" />
+      <workItem from="1712498427894" duration="7002000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
