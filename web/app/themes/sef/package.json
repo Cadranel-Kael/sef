@@ -21,7 +21,10 @@
   "devDependencies": {
     "@roots/bud": "6.20.0",
     "@roots/bud-sass": "^6.20.0",
+    "@roots/bud-swc": "^6.20.0",
     "@roots/sage": "6.20.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "axios": "^1.6.8"
+  }
 }
