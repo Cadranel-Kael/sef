@@ -1,22 +1,17 @@
 {
   "extends": [
     "@roots/bud/config/jsconfig.json",
-    "@roots/sage/config/jsconfig.json"
+    "@roots/sage/config/jsconfig.json",
+    "@roots/bud-typescript/tsconfig/tsconfig.json"
   ],
   "compilerOptions": {
     "baseUrl": "resources",
-    /**
-     * Resolve aliases
-     */
     "paths": {
       "@fonts/*": ["fonts/*"],
       "@images/*": ["images/*"],
       "@scripts/*": ["scripts/*"],
       "@styles/*": ["styles/*"]
     },
-    /**
-     * Type definitions
-     */
     "types": [
       "@roots/bud",
       "@roots/bud-react",
