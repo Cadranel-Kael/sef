@@ -1,0 +1,7 @@
+@use '../base/_typography' as *;
+
+.header {
+  &__test {
+    @include heading(1);
+  }
+}
