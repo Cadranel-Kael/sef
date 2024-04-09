@@ -1,0 +1,31 @@
+
+// Heading
+$heading-base-size: 5.625rem;
+$heading-ratio: 1.40625;
+$heading-line-height: 1.1;
+
+@mixin heading($level) {
+  @if($level == 1) {
+    font-size: $heading-base-size;
+  } @else {
+    font-size: $heading-base-size / pow($heading-ratio, $level - 1);
+  }
+  font-family: 'Permanent Marker', serif;
+  line-height: $heading-line-height;
+}
+
+// Text
+$text-sizes: (
+  'small': 0.875rem,
+  'normal': 1rem,
+  'medium': 1.125rem,
+  'large': 1.25rem,
+);
+$text-line-height: 1.6;
+
+@mixin text($size) {
+  font-size: map-get($text-sizes, $size);
+  font-family: 'Open Sans', sans-serif;
+  line-height: $text-line-height;
+  font-weight: normal;
+}
