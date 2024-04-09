@@ -11,7 +11,7 @@
 |
 */
 
-if (! file_exists($composer = __DIR__.'/vendor/autoload.php')) {
+if (!file_exists($composer = __DIR__ . '/vendor/autoload.php')) {
     wp_die(__('Error locating autoloader. Please run <code>composer install</code>.', 'sage'));
 }
 
@@ -29,7 +29,7 @@ require $composer;
 |
 */
 
-if (! function_exists('\Roots\bootloader')) {
+if (!function_exists('\Roots\bootloader')) {
     wp_die(
         __('You need to install Acorn to use this theme.', 'sage'),
         '',
@@ -56,10 +56,29 @@ if (! function_exists('\Roots\bootloader')) {
 
 collect(['setup', 'filters'])
     ->each(function ($file) {
-        if (! locate_template($file = "app/{$file}.php", true, true)) {
+        if (!locate_template($file = "app/{$file}.php", true, true)) {
             wp_die(
-                /* translators: %s is replaced with the relative file path */
+            /* translators: %s is replaced with the relative file path */
                 sprintf(__('Error locating <code>%s</code> for inclusion.', 'sage'), $file)
             );
         }
     });
+
+function get_navigation_links(string $location): array
+{
+    $locations = get_nav_menu_locations();
+    $menuId = $locations[$location] ?? null;
+    if (is_null($menuId)) {
+        return [];
+    }
+
+    $items = wp_get_nav_menu_items($menuId);
+
+    foreach ($items as $key => $item) {
+        $items[$key] = new stdClass();
+        $items[$key]->url = $item->url;
+        $items[$key]->label = $item->title;
+    }
+
+    return $items;
+}
