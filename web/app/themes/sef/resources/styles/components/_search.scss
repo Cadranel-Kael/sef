@@ -1,0 +1,46 @@
+@use '../base/_border' as *;
+@use '../base/_colors' as *;
+@use '../base/_icons' as *;
+
+.search {
+  &__form {
+    height: 100%;
+  }
+
+  &__field {
+    height: 100%;
+    display: flex;
+  }
+
+  &__input {
+    margin-left: auto;
+    border: none;
+    width: 0;
+    transition: width 0.3s;
+
+    &--expanded {
+      width: 100%;
+      border-bottom: $border-width solid $color-black;
+    }
+  }
+
+  &__button {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    &:before {
+      content: url('~@images/icon-search.svg');
+      display: inline-block;
+      width: 1.5em;
+      height: 1.5em;
+    }
+  }
+
+  &__dropdown {
+    &--loading:before {
+      @include icon('spinner');
+    }
+  }
+}
