@@ -1,0 +1,7 @@
+@use '_typography' as *;
+@use '_colors' as *;
+
+body {
+  @include text('normal');
+  color: $color-black;
+}
