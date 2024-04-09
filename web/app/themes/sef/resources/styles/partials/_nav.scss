@@ -1,0 +1,36 @@
+@use '../base/_sizes' as *;
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-content: end;
+  max-width: $max-site-width;
+  margin: auto;
+
+  &__logo {
+    height: auto;
+    width: 2.5rem;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    list-style: none;
+    margin: auto auto 0 0;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+    margin-right: 1.25rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__button {
+    margin-right: 2.5rem;
+  }
+}
