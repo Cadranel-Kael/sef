@@ -1,0 +1,55 @@
+@use '../base/_typography' as *;
+@use '../base/_sizes' as *;
+
+.teams {
+  margin: 9.375rem auto 0;
+  display: grid;
+  max-width: $max-site-width;
+  grid-template-columns: $column-width 1fr;
+  position: relative;
+
+  &__title {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    @include heading(2);
+    position: sticky;
+    align-self: start;
+    top: 0;
+    margin: 0;
+  }
+
+  &__team, .team {
+    grid-column: 2/-1;
+    margin-bottom: 5rem;
+
+    &__title {
+      @include heading(3);
+      margin-bottom: 1rem;
+    }
+
+    &__members {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 0;
+      @include screen-lg {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+
+    &__member, .member {
+      display: flex;
+      align-items: end;
+      gap: 0.125rem;
+      margin-bottom: 2rem;
+
+      &__name {
+        @include heading(4);
+        margin-bottom: 1.25rem;
+      }
+    }
+  }
+
+  &__container {
+    grid-column: 2/-1;
+  }
+}
