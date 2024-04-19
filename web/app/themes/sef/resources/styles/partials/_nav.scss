@@ -1,36 +1,98 @@
 @use '../base/_sizes' as *;
+@use '../base/_colors' as *;
+@use '../utils/sr' as *;
 
 .nav {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-content: end;
   max-width: $max-site-width;
   margin: auto;
+  color: $color-white;
+  text-align: center;
+
+  @include screen-lg {
+    flex-direction: row;
+    color: $color-black;
+  }
+
+  &__home {
+    margin: 1rem auto 0;
+    height: auto;
+    width: 2.5rem;
+    flex: 0 0 auto;
+    position: absolute;
+  }
 
   &__logo {
     height: auto;
-    width: 2.5rem;
+    width: 100%;
+    z-index: 13;
   }
 
   &__menu {
     display: flex;
-    flex-direction: row;
-    align-items: start;
+    flex-direction: column;
+    align-items: center;
     list-style: none;
-    margin: auto auto 0 0;
+    flex: 1 0 auto;
+    background: $color-black;
+
+    @include screen-lg {
+      background: none;
+      margin: auto auto 0 0;
+      flex-direction: row;
+      justify-content: end;
+      flex: auto;
+    }
+
+    @include screen-md {
+      height: 100vh;
+      width: 100vw;
+
+      &--closed {
+        @include sr-only;
+      }
+
+      &--open {
+        background: $color-black;
+        position: fixed;
+        z-index: 10;
+      }
+    }
   }
 
   &__link {
     text-decoration: none;
     color: inherit;
-    margin-right: 1.25rem;
+    display: block;
+    padding: 1rem 0;
 
     &:hover {
       text-decoration: underline;
     }
+
+    @include screen-lg {
+      margin-right: 1.25rem;
+    }
   }
 
   &__button {
+    align-self: center;
     margin-right: 2.5rem;
+  }
+
+  &__search-item {
+    order: -1;
+
+    @include screen-lg {
+      order: inherit;
+    }
+  }
+
+  &__search {
+    &:before {
+
+    }
   }
 }
