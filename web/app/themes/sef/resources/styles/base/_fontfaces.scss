@@ -10,16 +10,16 @@
   font-family: 'Permanent Marker';
   font-style: normal;
   font-weight: auto;
-  src: url('~@fonts/PermenantMarker.ttf');
+  src: url('~@fonts/PermanentMarker.ttf');
 }
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('~@fonts/icomoon.eot?dj55ii');
-  src:  url('~@fonts/icomoon.eot?dj55ii#iefix') format('embedded-opentype'),
-  url('~@fonts/icomoon.ttf?dj55ii') format('truetype'),
-  url('~@fonts/icomoon.woff?dj55ii') format('woff'),
-  url('~@fonts/icomoon.svg?dj55ii#icomoon') format('svg');
+  src: url('~@fonts/icomoon.eot');
+  src: url('~@fonts/icomoon.eot') format('embedded-opentype'),
+  url('~@fonts/icomoon.ttf') format('truetype'),
+  url('~@fonts/icomoon.woff') format('woff'),
+  url('~@fonts/icomoon.svg') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
