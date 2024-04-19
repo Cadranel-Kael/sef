@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3bdc4897759c4081bbb3c5337ce85fa0",
+    "content-hash": "e645e6dff31bdb39cb2393198f55e235",
     "packages": [
         {
             "name": "brick/math",
@@ -911,7 +911,7 @@
         },
         {
             "name": "illuminate/bus",
-            "version": "v10.48.4",
+            "version": "v10.48.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/bus.git",
@@ -964,7 +964,7 @@
         },
         {
             "name": "illuminate/cache",
-            "version": "v10.48.4",
+            "version": "v10.48.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/cache.git",
@@ -1026,7 +1026,7 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v10.48.4",
+            "version": "v10.48.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
@@ -1081,7 +1081,7 @@
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v10.48.4",
+            "version": "v10.48.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -1127,7 +1127,7 @@
         },
         {
             "name": "illuminate/config",
-            "version": "v10.48.4",
+            "version": "v10.48.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/config.git",
@@ -1175,16 +1175,16 @@
         },
         {
             "name": "illuminate/console",
-            "version": "v10.48.4",
+            "version": "v10.48.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/console.git",
-                "reference": "f6f9b944ef0f59dd331350bdd1e720c850946bb1"
+                "reference": "d001036218ea5fbb382ee5c845292b067ea8b46f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/console/zipball/f6f9b944ef0f59dd331350bdd1e720c850946bb1",
-                "reference": "f6f9b944ef0f59dd331350bdd1e720c850946bb1",
+                "url": "https://api.github.com/repos/illuminate/console/zipball/d001036218ea5fbb382ee5c845292b067ea8b46f",
+                "reference": "d001036218ea5fbb382ee5c845292b067ea8b46f",
                 "shasum": ""
             },
             "require": {
@@ -1236,11 +1236,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2024-03-11T21:46:09+00:00"
+            "time": "2024-03-21T13:10:17+00:00"
         },
         {
             "name": "illuminate/container",
-            "version": "v10.48.4",
+            "version": "v10.48.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -1291,7 +1291,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v10.48.4",
+            "version": "v10.48.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -1339,16 +1339,16 @@
         },
         {
             "name": "illuminate/database",
-            "version": "v10.48.4",
+            "version": "v10.48.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "0f003d7970b966d3bccf407876fe83cac35ebe67"
+                "reference": "635b0319641f7c746300f615838232ae30b0760c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/0f003d7970b966d3bccf407876fe83cac35ebe67",
-                "reference": "0f003d7970b966d3bccf407876fe83cac35ebe67",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/635b0319641f7c746300f615838232ae30b0760c",
+                "reference": "635b0319641f7c746300f615838232ae30b0760c",
                 "shasum": ""
             },
             "require": {
@@ -1408,11 +1408,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2024-03-12T02:39:22+00:00"
+            "time": "2024-04-10T14:11:27+00:00"
         },
         {
             "name": "illuminate/encryption",
-            "version": "v10.48.4",
+            "version": "v10.48.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/encryption.git",
@@ -1463,7 +1463,7 @@
         },
         {
             "name": "illuminate/events",
-            "version": "v10.48.4",
+            "version": "v10.48.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
@@ -1518,7 +1518,7 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v10.48.4",
+            "version": "v10.48.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -1585,7 +1585,7 @@
         },
         {
             "name": "illuminate/http",
-            "version": "v10.48.4",
+            "version": "v10.48.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/http.git",
@@ -1645,7 +1645,7 @@
         },
         {
             "name": "illuminate/log",
-            "version": "v10.48.4",
+            "version": "v10.48.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/log.git",
@@ -1694,7 +1694,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v10.48.4",
+            "version": "v10.48.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -1740,7 +1740,7 @@
         },
         {
             "name": "illuminate/pipeline",
-            "version": "v10.48.4",
+            "version": "v10.48.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/pipeline.git",
@@ -1788,7 +1788,7 @@
         },
         {
             "name": "illuminate/queue",
-            "version": "v10.48.4",
+            "version": "v10.48.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/queue.git",
@@ -1855,7 +1855,7 @@
         },
         {
             "name": "illuminate/routing",
-            "version": "v10.48.4",
+            "version": "v10.48.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/routing.git",
@@ -1919,7 +1919,7 @@
         },
         {
             "name": "illuminate/session",
-            "version": "v10.48.4",
+            "version": "v10.48.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/session.git",
@@ -1976,16 +1976,16 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v10.48.4",
+            "version": "v10.48.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "980d80017e859c8b1720892d952516e8c0b6708f"
+                "reference": "ee3a1aaed36d916654ce0ae09dfbd38644a4f582"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/980d80017e859c8b1720892d952516e8c0b6708f",
-                "reference": "980d80017e859c8b1720892d952516e8c0b6708f",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/ee3a1aaed36d916654ce0ae09dfbd38644a4f582",
+                "reference": "ee3a1aaed36d916654ce0ae09dfbd38644a4f582",
                 "shasum": ""
             },
             "require": {
@@ -2043,11 +2043,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2024-03-11T21:46:45+00:00"
+            "time": "2024-04-07T17:47:33+00:00"
         },
         {
             "name": "illuminate/translation",
-            "version": "v10.48.4",
+            "version": "v10.48.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/translation.git",
@@ -2098,7 +2098,7 @@
         },
         {
             "name": "illuminate/validation",
-            "version": "v10.48.4",
+            "version": "v10.48.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/validation.git",
@@ -2159,7 +2159,7 @@
         },
         {
             "name": "illuminate/view",
-            "version": "v10.48.4",
+            "version": "v10.48.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/view.git",
@@ -2212,17 +2212,198 @@
             "time": "2024-03-12T16:33:42+00:00"
         },
         {
-            "name": "laravel/prompts",
-            "version": "v0.1.17",
+            "name": "johnbillion/args",
+            "version": "1.10.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laravel/prompts.git",
-                "reference": "8ee9f87f7f9eadcbe21e9e72cd4176b2f06cd5b5"
+                "url": "https://github.com/johnbillion/args.git",
+                "reference": "ef670a14ce0b9221cee0a39f076f4810a200d1ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/prompts/zipball/8ee9f87f7f9eadcbe21e9e72cd4176b2f06cd5b5",
-                "reference": "8ee9f87f7f9eadcbe21e9e72cd4176b2f06cd5b5",
+                "url": "https://api.github.com/repos/johnbillion/args/zipball/ef670a14ce0b9221cee0a39f076f4810a200d1ac",
+                "reference": "ef670a14ce0b9221cee0a39f076f4810a200d1ac",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "ergebnis/json-printer": "^3.2",
+                "ergebnis/phpstan-rules": "^1.0",
+                "humanmade/coding-standards": "^1.1",
+                "johnbillion/falsey-assertequals-detector": "^3",
+                "phpdocumentor/reflection": "~4.0 || ~5.0",
+                "phpstan/phpstan": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "phpstan/phpstan-strict-rules": "^1.1",
+                "phpunit/phpunit": "^9.0",
+                "roots/wordpress-core-installer": "^1.0.0",
+                "roots/wordpress-full": "~6.5.0"
+            },
+            "type": "library",
+            "extra": {
+                "args-shapes": [
+                    "--function=\"\\get_categories()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/category.php",
+                    "--function=\"\\get_comments()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/comment.php",
+                    "--function=\"\\get_posts()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/post.php",
+                    "--function=\"\\get_tags()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/category.php",
+                    "--function=\"\\get_terms()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/taxonomy.php",
+                    "--function=\"\\get_users()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/user.php",
+                    "--function=\"\\paginate_links()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/general-template.php",
+                    "--function=\"\\register_block_type()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/blocks.php",
+                    "--function=\"\\register_meta()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/meta.php",
+                    "--function=\"\\register_post_meta()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/post.php",
+                    "--function=\"\\register_post_status()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/post.php",
+                    "--function=\"\\register_post_type()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/post.php",
+                    "--function=\"\\register_rest_field()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/rest-api.php",
+                    "--function=\"\\register_taxonomy()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/taxonomy.php",
+                    "--function=\"\\register_term_meta()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/taxonomy.php",
+                    "--function=\"\\wp_count_terms()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/taxonomy.php",
+                    "--function=\"\\wp_die()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/functions.php",
+                    "--function=\"\\wp_dropdown_categories()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/category-template.php",
+                    "--function=\"\\wp_dropdown_languages()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/l10n.php",
+                    "--function=\"\\wp_generate_tag_cloud()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/category-template.php",
+                    "--function=\"\\wp_get_nav_menus()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/nav-menu.php",
+                    "--function=\"\\wp_get_object_terms()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/taxonomy.php",
+                    "--function=\"\\wp_insert_post()\" --param=postarr --file=vendor/wordpress/wordpress/wp-includes/post.php",
+                    "--function=\"\\wp_insert_term()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/taxonomy.php",
+                    "--function=\"\\wp_insert_user()\" --param=userdata --file=vendor/wordpress/wordpress/wp-includes/user.php",
+                    "--function=\"\\wp_nav_menu()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/nav-menu-template.php",
+                    "--function=\"\\wp_remote_get()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/http.php",
+                    "--function=\"\\wp_remote_head()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/http.php",
+                    "--function=\"\\wp_remote_post()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/http.php",
+                    "--function=\"\\wp_remote_request()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/http.php",
+                    "--function=\"\\wp_safe_remote_get()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/http.php",
+                    "--function=\"\\wp_safe_remote_head()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/http.php",
+                    "--function=\"\\wp_safe_remote_post()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/http.php",
+                    "--function=\"\\wp_safe_remote_request()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/http.php",
+                    "--function=\"\\wp_update_post()\" --param=postarr --file=vendor/wordpress/wordpress/wp-includes/post.php",
+                    "--function=\"\\wp_update_term()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/taxonomy.php",
+                    "--function=\"\\wp_update_user()\" --param=userdata --file=vendor/wordpress/wordpress/wp-includes/user.php",
+                    "--method=\"\\WP_Block_Type::__construct()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/class-wp-block-type.php",
+                    "--method=\"\\WP_Comment_Query::__construct()\" --param=query --file=vendor/wordpress/wordpress/wp-includes/class-wp-comment-query.php",
+                    "--method=\"\\WP_Customize_Control::__construct()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/class-wp-customize-control.php",
+                    "--method=\"\\WP_Customize_Manager::__construct()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/class-wp-customize-manager.php",
+                    "--method=\"\\WP_Customize_Panel::__construct()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/class-wp-customize-panel.php",
+                    "--method=\"\\WP_Customize_Section::__construct()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/class-wp-customize-section.php",
+                    "--method=\"\\WP_Customize_Setting::__construct()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/class-wp-customize-setting.php",
+                    "--method=\"\\WP_Http::request()\" --param=args --file=vendor/wordpress/wordpress/wp-includes/class-wp-http.php",
+                    "--method=\"\\WP_Query::parse_query()\" --param=query --file=vendor/wordpress/wordpress/wp-includes/class-wp-query.php",
+                    "--method=\"\\WP_Term_Query::__construct()\" --param=query --file=vendor/wordpress/wordpress/wp-includes/class-wp-term-query.php",
+                    "--method=\"\\WP_User_Query::prepare_query()\" --param=query --file=vendor/wordpress/wordpress/wp-includes/class-wp-user-query.php"
+                ],
+                "wordpress-install-dir": "vendor/wordpress/wordpress"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Args\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "John Blackbourn",
+                    "homepage": "https://johnblackbourn.com/"
+                }
+            ],
+            "description": "I don't want to get into an argument about this.",
+            "support": {
+                "issues": "https://github.com/johnbillion/args/issues",
+                "source": "https://github.com/johnbillion/args/tree/1.10.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/johnbillion",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-04-02T21:50:24+00:00"
+        },
+        {
+            "name": "johnbillion/extended-cpts",
+            "version": "5.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johnbillion/extended-cpts.git",
+                "reference": "98cddd4d0f174ee6466c70ea067b154559dbdc4e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johnbillion/extended-cpts/zipball/98cddd4d0f174ee6466c70ea067b154559dbdc4e",
+                "reference": "98cddd4d0f174ee6466c70ea067b154559dbdc4e",
+                "shasum": ""
+            },
+            "require": {
+                "johnbillion/args": "^1.4.1",
+                "php": ">= 7.4.0"
+            },
+            "require-dev": {
+                "automattic/phpcs-neutron-standard": "1.7.0",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+                "johnbillion/falsey-assertequals-detector": "*",
+                "johnbillion/plugin-infrastructure": "dev-trunk",
+                "lucatume/wp-browser": ">=3.0.21 <3.5",
+                "phpcompatibility/phpcompatibility-wp": "^2",
+                "phpstan/phpstan": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "roots/wordpress-core-installer": "^1.0.0",
+                "roots/wordpress-full": "*",
+                "szepeviktor/phpstan-wordpress": "1.1.6",
+                "wp-coding-standards/wpcs": "2.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "wordpress-install-dir": "vendor/wordpress/wordpress"
+            },
+            "autoload": {
+                "files": [
+                    "functions.php"
+                ],
+                "psr-4": {
+                    "ExtCPTs\\": "src",
+                    "ExtCPTs\\Tests\\": "tests/integration"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "John Blackbourn",
+                    "homepage": "https://johnblackbourn.com/"
+                }
+            ],
+            "description": "A library which provides extended functionality to WordPress custom post types and taxonomies.",
+            "homepage": "https://github.com/johnbillion/extended-cpts/",
+            "support": {
+                "issues": "https://github.com/johnbillion/extended-cpts/issues",
+                "source": "https://github.com/johnbillion/extended-cpts/tree/5.0.7"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/johnbillion",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-04-02T22:29:29+00:00"
+        },
+        {
+            "name": "laravel/prompts",
+            "version": "v0.1.18",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/prompts.git",
+                "reference": "3b5e6b03f1f1175574b5a32331d99c9819da9848"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/prompts/zipball/3b5e6b03f1f1175574b5a32331d99c9819da9848",
+                "reference": "3b5e6b03f1f1175574b5a32331d99c9819da9848",
                 "shasum": ""
             },
             "require": {
@@ -2264,9 +2445,9 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel/prompts/issues",
-                "source": "https://github.com/laravel/prompts/tree/v0.1.17"
+                "source": "https://github.com/laravel/prompts/tree/v0.1.18"
             },
-            "time": "2024-03-13T16:05:43+00:00"
+            "time": "2024-04-04T17:41:50+00:00"
         },
         {
             "name": "laravel/serializable-closure",
@@ -2330,16 +2511,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "3.26.0",
+            "version": "3.27.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "072735c56cc0da00e10716dd90d5a7f7b40b36be"
+                "reference": "4729745b1ab737908c7d055148c9a6b3e959832f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/072735c56cc0da00e10716dd90d5a7f7b40b36be",
-                "reference": "072735c56cc0da00e10716dd90d5a7f7b40b36be",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/4729745b1ab737908c7d055148c9a6b3e959832f",
+                "reference": "4729745b1ab737908c7d055148c9a6b3e959832f",
                 "shasum": ""
             },
             "require": {
@@ -2404,7 +2585,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/3.26.0"
+                "source": "https://github.com/thephpleague/flysystem/tree/3.27.0"
             },
             "funding": [
                 {
@@ -2416,7 +2597,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-25T11:49:53+00:00"
+            "time": "2024-04-07T19:17:50+00:00"
         },
         {
             "name": "league/flysystem-local",
@@ -2590,6 +2771,68 @@
                 }
             ],
             "time": "2024-03-14T13:48:21+00:00"
+        },
+        {
+            "name": "log1x/poet",
+            "version": "v2.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Log1x/poet.git",
+                "reference": "9a7c17f441d88d6ace41f9300228bf1f4704878d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Log1x/poet/zipball/9a7c17f441d88d6ace41f9300228bf1f4704878d",
+                "reference": "9a7c17f441d88d6ace41f9300228bf1f4704878d",
+                "shasum": ""
+            },
+            "require": {
+                "johnbillion/extended-cpts": "^5.0",
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^3.5"
+            },
+            "type": "package",
+            "extra": {
+                "acorn": {
+                    "providers": [
+                        "Log1x\\Poet\\PoetServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Log1x\\Poet\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brandon Nifong",
+                    "email": "brandon@tendency.me"
+                }
+            ],
+            "description": "Configuration-based post type, taxonomy, editor color palette, block category, and block registration for Sage 10.",
+            "keywords": [
+                "cpt",
+                "gutenberg",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/log1x/poet/issues",
+                "source": "https://github.com/Log1x/poet/tree/v2.0.9"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/Log1x",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-11-16T23:04:37+00:00"
         },
         {
             "name": "monolog/monolog",
