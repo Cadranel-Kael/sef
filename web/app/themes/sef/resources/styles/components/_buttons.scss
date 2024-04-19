@@ -12,9 +12,21 @@
 
   &--primary {
     background-color: $color-primary;
+    color: $color-black;
+
     &:hover, &:focus {
       background-color: $color-black;
       color: $color-primary;
+    }
+  }
+
+  &--outline {
+    background: $color-white;
+    border: $color-black $border-width solid;
+
+    &:hover, &:focus {
+      background: $color-black;
+      color: $color-white;
     }
   }
 }
