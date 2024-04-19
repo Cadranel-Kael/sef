@@ -12,6 +12,19 @@ $heading-line-height: 1.1;
   }
   font-family: 'Permanent Marker', serif;
   line-height: $heading-line-height;
+  strong {
+    position: relative;
+  }
+  strong:before {
+    content: '';
+    background-image: url("~@images/visual-highlight.svg");
+    background-repeat: no-repeat;
+    background-size: 110% 100%;
+    width: 110%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+  }
 }
 
 // Text
