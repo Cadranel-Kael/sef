@@ -1,0 +1,68 @@
+@use '../base/_colors' as *;
+@use '../base/_border' as *;
+@use '../base/_sizes' as *;
+
+
+.burger-button {
+  background: $color-black;
+  padding: 1rem;
+  fill: $color-white;
+  cursor: pointer;
+  display: inline-block;
+  z-index: 12;
+  position: fixed;
+  border: none;
+  border-radius: $border-radius;
+  right: 1rem;
+  top: 1rem;
+  outline: none;
+
+  @include screen-lg {
+    display: none;
+  }
+
+  &--open {
+    .burger-button__line--top, .burger-button__line--bottom {
+      y: 45;
+      animation: to-close-icon 0.5s forwards 0.5s ease-in-out;
+    }
+
+    .burger-button__line--middle {
+      animation: to-close-icon-reverse 0.5s forwards 0.5s ease-in-out;
+    }
+  }
+
+
+  &__line {
+    transition: 0.5s;
+    transform-origin: center;
+  }
+}
+
+  @keyframes to-close-icon {
+    0% {
+      rotate: 0deg;
+    }
+
+    50% {
+      rotate: 60deg;
+    }
+
+    100% {
+      rotate: 45deg;
+    }
+  }
+
+@keyframes to-close-icon-reverse {
+  0% {
+    rotate: 0deg;
+  }
+
+  50% {
+    rotate: -60deg;
+  }
+
+  100% {
+    rotate: -45deg;
+  }
+}
