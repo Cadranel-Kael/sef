@@ -1,6 +1,7 @@
 @use '../base/_border' as *;
 @use '../base/_colors' as *;
 @use '../base/_icons' as *;
+@use '../base/_sizes' as *;
 
 .search {
   &__form {
@@ -17,10 +18,27 @@
     border: none;
     width: 0;
     transition: width 0.3s;
+    font-family: inherit;
+    background: none;
+    color: $color-white;
+
+    @include screen-lg {
+      color: $color-black;
+    }
+
+    &::placeholder {
+      color: $color-white;
+      @include screen-lg {
+        color: $color-black;
+      }
+    }
 
     &--expanded {
       width: 100%;
-      border-bottom: $border-width solid $color-black;
+      border-bottom: $border-width solid $color-white;
+      @include screen-lg {
+        border-color: $color-black;
+      }
     }
   }
 
@@ -31,10 +49,13 @@
     cursor: pointer;
 
     &:before {
-      content: url('~@images/icon-search.svg');
-      display: inline-block;
-      width: 1.5em;
-      height: 1.5em;
+      @include icon('search');
+      font-size: 1.5rem;
+      color: $color-white;
+
+      @include screen-lg {
+        color: $color-black;
+      }
     }
   }
 
