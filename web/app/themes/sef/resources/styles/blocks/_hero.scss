@@ -1,0 +1,58 @@
+@use '../base/_typography' as *;
+@use '../base/_sizes' as *;
+@use '../base/_mixins' as *;
+
+.hero {
+  max-width: $max-site-width;
+  margin: auto spacing('sm');
+  position: relative;
+  height: 95vh;
+  min-height: 35.5rem;
+
+  &--left {
+    .hero__container {
+      right: 0;
+    }
+
+    .hero__image {
+      left: -10%;
+    }
+  }
+
+  &__container {
+    max-width: 40rem;
+    position: absolute;
+    top: 15%;
+  }
+
+  &__title {
+    @include heading(3);
+    @include screen-lg {
+      @include heading(1)
+    }
+  }
+
+  &__text {
+    @include max-column(6);
+  }
+
+  &__image {
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
+    height: auto;
+    z-index: -1;
+
+    @include screen-lg {
+      right: -10%;
+    }
+
+    &:before {
+      content: url("~@images/visual-strokes.svg");
+      position: absolute;
+      z-index: 1;
+    }
+  }
+
+
+}
