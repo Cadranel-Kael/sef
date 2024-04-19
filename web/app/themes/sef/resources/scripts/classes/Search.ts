@@ -20,7 +20,6 @@ export class Search {
     this._url = this._form.getAttribute('action');
     this._dropdown = this.createDropdown();
     this._results = this.createResults();
-    this.setLoading();
     this.init();
   }
 
