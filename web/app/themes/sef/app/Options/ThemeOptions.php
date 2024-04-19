@@ -29,8 +29,20 @@ class ThemeOptions extends Field
         $themeOptions = Builder::make('theme_options');
 
         $themeOptions
-            ->addImage('site-logo', ['label' => 'Logo', 'return_format' => 'id'])
-            ->addLink('cta-nav-button', ['label' => 'Bouton de navigation CTA']);
+            ->addImage('site-logo', [
+                'label' => 'Logo',
+                'return_format' => 'id',
+                'mime_types' => 'svg',
+            ])
+            ->addLink('cta-nav-button', [
+                'label' => 'Bouton de navigation CTA',
+            ])
+            ->addLink('cta-1', [
+                'label' => 'Bouton CTA nº1',
+            ])
+            ->addLink('cta-2', [
+                'label' => 'Bouton CTA nº2',
+            ]);
 
         return $themeOptions->build();
     }
