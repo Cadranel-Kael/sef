@@ -10,12 +10,18 @@
   <body @php(body_class())>
     @php(wp_body_open())
 
-    <div id="app">
+    <div class="app" id="app">
       <a class="sr-only focus:not-sr-only" href="#main">
         {{ __('Skip to content') }}
       </a>
+      <h1 class="sr-only">{{ get_the_title() }}</h1>
 
       @include('sections.header')
+
+      <div class="app_fixed-cta fixed-cta" data-align="right" x-slide>
+        <x-button type="primary" class="fixed-cta__button" :href="$btn1['url']">{{ $btn1['title'] }}</x-button>
+        <x-button type="outline" class="fixed-cta__button" :href="$btn2['url']">{{ $btn2['title'] }}</x-button>
+      </div>
 
       <main id="main" class="main">
         @yield('content')
