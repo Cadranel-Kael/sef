@@ -82,3 +82,12 @@ function get_navigation_links(string $location): array
 
     return $items;
 }
+
+function add_file_types_to_uploads($file_types): array
+{
+    $new_filetypes = array();
+    $new_filetypes['svg'] = 'image/svg+xml';
+    return array_merge($file_types, $new_filetypes);
+}
+
+add_filter('upload_mimes', 'add_file_types_to_uploads');
