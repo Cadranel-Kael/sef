@@ -1,6 +1,14 @@
+@forward 'base/_reset';
+@forward 'base/_fontfaces';
 @forward 'utils/_sr';
 @forward 'base/_general';
 @forward 'partials/_nav';
 @forward 'sections/_header';
 @forward 'components/_buttons';
 @forward 'components/_search';
+@forward 'components/_burger-button';
+@forward 'blocks/_hero';
+@forward 'blocks/_image-paragraph';
+@forward 'blocks/_paragraphs';
+@forward 'blocks/_teams';
+@forward 'layout/_app';
