@@ -23,6 +23,10 @@ class Members extends Field
             ->addImage('image', ['return_format' => 'id'])
             ->endRepeater();
 
+        $team
+            ->setGroupConfig('hide_on_screen', ['the_content'])
+            ->setGroupConfig('style', 'seamless');
+
         return $team->build();
     }
 }
