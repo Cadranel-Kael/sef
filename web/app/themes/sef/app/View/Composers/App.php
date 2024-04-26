@@ -24,6 +24,9 @@ class App extends Composer
     {
         return [
             'siteName' => $this->siteName(),
+            'phone' => get_field('phone', 'option'),
+            'email' => get_field('email', 'option'),
+            'address' => get_field('address', 'option'),
             'siteLogo' => get_field('site-logo', 'option'),
             'btn1' => get_field('cta-1', 'option'),
             'btn2' => get_field('cta-2', 'option')
