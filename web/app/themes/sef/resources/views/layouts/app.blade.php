@@ -18,7 +18,7 @@
 
       @include('sections.header')
 
-      <div class="app_fixed-cta fixed-cta" data-align="right" x-slide>
+      <div class="fixed-cta" data-align="right" x-slide>
         <x-button type="primary" class="fixed-cta__button" :href="$btn1['url']">{{ $btn1['title'] }}</x-button>
         <x-button type="outline" class="fixed-cta__button" :href="$btn2['url']">{{ $btn2['title'] }}</x-button>
       </div>
