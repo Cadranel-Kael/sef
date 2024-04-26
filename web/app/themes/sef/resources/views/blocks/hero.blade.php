@@ -1,6 +1,6 @@
 <section style="{{ $block->inlineStyle }}" class="hero hero--{{ $alignment }} {{ $block->classes }}">
   <div class="hero__container">
-    <h2 class="hero__title">{!! $heading !!}</h2>
+    {!! $heading !!}
     @if($text)
       <p class="hero__text">{!! $text !!}</p>
     @endif

@@ -75,7 +75,7 @@ class Hero extends Block
      *
      * @var string
      */
-    public $align = '';
+    public $align = 'full';
 
     /**
      * The default block text alignment.
@@ -102,7 +102,7 @@ class Hero extends Block
         'align_content' => false,
         'full_height' => true,
         'anchor' => false,
-        'mode' => false,
+        'mode' => true,
         'multiple' => true,
         'jsx' => true,
     ];
@@ -132,16 +132,29 @@ class Hero extends Block
 
         $hero
             ->addWysiwyg('heading', [
+                'label' => 'Titrage',
                 'toolbar' => 'basic',
                 'tabs' => 'visual',
                 'media_upload' => false,
                 'required' => true
             ])
+            ->addSelect('heading-level', [
+                'label' => __('Niveau de titrage'),
+                'choices' => [
+                    'h2' => '1',
+                    'h3' => '2',
+                    'h4' => '3',
+                    'h5' => '4',
+                    'h6' => '5',
+                ],
+                'default_value' => 'h2',
+            ])
             ->addTrueFalse('text_field', [
-                'message' => 'Enable Text',
+                'message' => 'Activer le texte',
                 'default_value' => 0,
             ])
             ->addWysiwyg('text', [
+                'label' => 'Texte',
                 'conditional_logic' => [
                     [
                         [
@@ -156,15 +169,34 @@ class Hero extends Block
                 'media_upload' => false,
                 'required' => false
             ])
+            ->addTrueFalse('default-background', [
+                'message' => 'Activer l\'image de fond par défaut. (Trouvé dans les options du thème)',
+                'default_value' => 1,
+            ])
+            ->addImage('background-image', [
+                'label' => 'Image de fond',
+                'conditional_logic' => [
+                    [
+                        [
+                            'field' => 'image_field',
+                            'operator' => '==',
+                            'value' => '1',
+                        ],
+                    ],
+                ],
+                'return_format' => 'id',
+                'required' => true,
+            ])
             ->addGroup('image_field', [
-                'label' => 'Image'
+                'label' => 'Image',
             ])
             ->addSelect('alignment', [
                 'choices' => ['right', 'left']
             ])
             ->addImage('image', [
                 'return_format' => 'id',
-                'required' => true
+                'required' => true,
+                'instructions' => 'Utiliser une image sans fond pour de meilleurs résultats.',
             ])
             ->endGroup();
 
@@ -182,6 +214,7 @@ class Hero extends Block
             'text' => $this->text(),
             'image' => $this->image(),
             'alignment' => $this->alignment(),
+            'background' => $this->background(),
         ];
     }
 
@@ -189,11 +222,16 @@ class Hero extends Block
     /**
      * Retrieve the header.
      *
-     * @return array
+     * @return string
      */
     public function heading()
     {
-        return get_field('heading', false, false);
+        return sprintf(
+            "<%s class='hero__title'>%s</%s>",
+            get_field('heading-level'),
+            get_field('heading', false, false),
+            get_field('heading-level')
+        );
     }
 
     /**
@@ -204,9 +242,22 @@ class Hero extends Block
     public function text()
     {
         if (get_field('text_field')) {
-            return get_field('text');
+            return get_field('text', false, false);
         }
         return null;
+    }
+
+    /**
+     * Retrieve the background image personalised or the default one.
+     *
+     * @return array
+     */
+    public function background()
+    {
+        if (get_field('default-background')) {
+            return get_field('hero-image', 'option');
+        }
+        return get_field('background-image');
     }
 
     /**
