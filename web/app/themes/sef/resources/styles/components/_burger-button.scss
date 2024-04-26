@@ -5,10 +5,13 @@
 
 .burger-button {
   background: $color-black;
-  padding: 1rem;
   fill: $color-white;
+  width: 3rem;
+  min-height: 3rem;
   cursor: pointer;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 12;
   position: fixed;
   border: none;
