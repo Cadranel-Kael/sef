@@ -4,9 +4,11 @@
 @forward 'base/_general';
 @forward 'partials/_nav';
 @forward 'sections/_header';
+@forward 'sections/_footer';
 @forward 'components/_buttons';
 @forward 'components/_search';
 @forward 'components/_burger-button';
+@forward 'components/_fixed-cta';
 @forward 'blocks/_hero';
 @forward 'blocks/_image-paragraph';
 @forward 'blocks/_paragraphs';
