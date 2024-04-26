@@ -78,6 +78,11 @@ function get_navigation_links(string $location): array
         $items[$key] = new stdClass();
         $items[$key]->url = $item->url;
         $items[$key]->label = $item->title;
+        if (get_permalink() === $item->url) {
+            $items[$key]->active = true;
+        } else {
+            $items[$key]->active = false;
+        }
     }
 
     return $items;
@@ -91,3 +96,19 @@ function add_file_types_to_uploads($file_types): array
 }
 
 add_filter('upload_mimes', 'add_file_types_to_uploads');
+
+
+function prefix_disable_gutenberg($current_status, $post_type)
+{
+    if ($post_type === 'teams' || $post_type === 'housing') {
+        return false;
+    }
+    return $current_status;
+}
+add_filter('use_block_editor_for_post_type', 'prefix_disable_gutenberg', 10, 2);
+
+
+function remove_posts_menu() {
+    remove_menu_page('edit.php');
+}
+add_action('admin_menu', 'remove_posts_menu');
