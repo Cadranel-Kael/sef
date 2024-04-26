@@ -1,42 +1,68 @@
 @use '../base/_typography' as *;
 @use '../base/_sizes' as *;
-@use '../base/_mixins' as *;
+@use '../base/_colors' as *;
 
 .hero {
-  max-width: $max-site-width;
-  margin: auto spacing('sm');
   position: relative;
-  height: 95vh;
+  height: 100vh;
   min-height: 35.5rem;
+  width: 100vw;
+  overflow: hidden;
+  max-width:100%;
 
   &--left {
     .hero__container {
-      right: 0;
+      align-items: end;
     }
 
-    .hero__image {
+    .hero__figure {
       left: -10%;
+      right: initial;
     }
+  }
+
+  &__background {
+    position: absolute;
+    z-index: -5;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
   }
 
   &__container {
-    max-width: 40rem;
+    margin: 0 spacing('sm');
     position: absolute;
-    top: 15%;
+    top: spacing('xxl');
+
+    > * {
+      max-width: 40rem;
+    }
+    @include screen-lg {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      top: spacing('xxxl');
+      width: $max-site-width;
+    }
   }
 
   &__title {
-    @include heading(3);
+    @include heading(3, $color-white);
     @include screen-lg {
-      @include heading(1)
+      @include heading(1, $color-white);
     }
   }
 
   &__text {
     @include max-column(6);
+
+    @include screen-lg {
+      color: $color-white;
+    }
   }
 
-  &__image {
+  &__figure {
     position: absolute;
     bottom: 0;
     max-width: 100%;
@@ -48,11 +74,19 @@
     }
 
     &:before {
-      content: url("~@images/visual-strokes.svg");
+      content: '';
+      background-image: url("~@images/visual-strokes.svg");
+      background-repeat: no-repeat;
+      background-size: 120% 120%;
+      width: 100%;
+      height: 100%;
       position: absolute;
-      z-index: 1;
+      z-index: -1;
     }
   }
 
-
+  &__image {
+    width: 100%;
+    height: auto;
+  }
 }
