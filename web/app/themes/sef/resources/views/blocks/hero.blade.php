@@ -5,5 +5,7 @@
       <p class="hero__text">{!! $text !!}</p>
     @endif
   </div>
-  {!! wp_get_attachment_image($image, 'large', false, ['class' => 'hero__image']) !!}
+  <figure class="hero__figure">
+    {!! wp_get_attachment_image($image, 'large', false, ['class' => 'hero__image']) !!}
+  </figure>
 </section>
