@@ -1,0 +1,21 @@
+@use '../base/_sizes' as *;
+@use '../base/_colors' as *;
+
+.footer {
+  background: $color-black;
+  color: $color-white;
+  display: flex;
+  align-items: start;
+  padding: spacing('lg') 0;
+
+  &__logo {
+    > g > * {
+      fill: $color-white;
+    }
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+  }
+}
