@@ -2,13 +2,14 @@ $max-site-width: 82rem;
 $margin-site: 2.8%;
 
 $spacing: (
-  'xxs': 0.25rem,
-  'xs': 0.5rem,
-  'sm': 1rem,
-  'md': 2rem,
-  'lg': 4rem,
-  'xl': 8rem,
-  'xxl': 16rem,
+  'xxs': 0.25rem, // 4px
+  'xs': 0.5rem, // 8px
+  'sm': 1rem, // 16px
+  'md': 2rem, // 32px
+  'lg': 4rem, // 64px
+  'xl': 8rem, // 128px
+  'xxl': 10rem, // 160px
+  'xxxl': 16rem, // 256px
 );
 
 $column-width: 5rem;
