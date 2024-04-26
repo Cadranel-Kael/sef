@@ -34,6 +34,15 @@ class ThemeOptions extends Field
                 'return_format' => 'id',
                 'mime_types' => 'svg',
             ])
+            ->addText('phone', [
+                'label' => 'Numéro de téléphone',
+            ])
+            ->addText('email', [
+                'label' => 'Email',
+            ])
+            ->addText('address', [
+                'label' => 'Adresse',
+            ])
             ->addLink('cta-nav-button', [
                 'label' => 'Bouton de navigation CTA',
             ])
@@ -42,6 +51,10 @@ class ThemeOptions extends Field
             ])
             ->addLink('cta-2', [
                 'label' => 'Bouton CTA nº2',
+            ])
+            ->addImage('hero-image', [
+                'label' => 'Image de fond de l\'en-tête par défaut',
+                'return_format' => 'id',
             ]);
 
         return $themeOptions->build();
