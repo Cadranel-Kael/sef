@@ -1,29 +1,42 @@
+@use '../base/_colors' as *;
 
 // Heading
 $heading-base-size: 5.625rem;
 $heading-ratio: 1.40625;
 $heading-line-height: 1.1;
 
-@mixin heading($level) {
+@mixin heading($level, $color: $color-black) {
   @if($level == 1) {
     font-size: $heading-base-size;
   } @else {
     font-size: $heading-base-size / pow($heading-ratio, $level - 1);
   }
+
   font-family: 'Permanent Marker', serif;
   line-height: $heading-line-height;
   strong {
     position: relative;
+    display: inline-block;
+    @if($color == $color-white) {
+      color: $color-primary;
+    }
   }
-  strong:before {
-    content: '';
-    background-image: url("~@images/visual-highlight.svg");
-    background-repeat: no-repeat;
-    background-size: 110% 100%;
-    width: 110%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
+
+  @if($color) {
+    color: $color;
+  }
+
+  @if($color != $color-white) {
+    strong:before {
+      content: '';
+      background-image: url("~@images/visual-highlight.svg");
+      background-repeat: no-repeat;
+      background-size: 110% 100%;
+      width: 110%;
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+    }
   }
 }
 
