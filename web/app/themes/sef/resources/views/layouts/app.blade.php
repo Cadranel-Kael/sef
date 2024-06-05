@@ -23,7 +23,7 @@
         <x-button type="outline" class="fixed-cta__button" :href="$btn2['url']">{{ $btn2['title'] }}</x-button>
       </div>
 
-      <main id="main" class="main">
+      <main id="main" class="app__main">
         @yield('content')
       </main>
 
