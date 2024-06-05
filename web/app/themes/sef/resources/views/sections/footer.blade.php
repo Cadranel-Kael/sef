@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="app__footer footer">
   <nav>
     <h2 class="sr-only">{{__('Menu footer')}}</h2>
     <a class="footer__home" href="{{ home_url('/') }}">
