@@ -1,25 +1,28 @@
 <nav class="nav">
   <h2 class="nav__title sr-only">{{__('Menu principale')}}</h2>
-  <li>
-    <a class="nav__home" href="{{ home_url('/') }}">
-      {!! wp_get_attachment_image($siteLogo, 'thumbnail', false, ['class' => 'nav__logo']) !!}
-    </a>
-  </li>
+  <a class="nav__home" href="{{ home_url('/') }}">
+    {!! wp_get_attachment_image($siteLogo, 'thumbnail', false, ['class' => 'nav__logo style-svg']) !!}
+  </a>
+  <x-burger-button id="burger-button"/>
   @if (has_nav_menu('primary_navigation'))
-    <x-burger-button id="burger-button"/>
-    <ul class="nav__menu" id="main-menu">
+    <ul class="nav__menu menu" id="main-menu">
+      <li class="menu__item menu__item--logo">
+        <a class="menu__link" aria-hidden="true" href="{{ home_url('/') }}">
+          {!! wp_get_attachment_image($siteLogo, 'thumbnail', false, ['class' => 'menu__logo style-svg']) !!}
+        </a>
+      </li>
       @foreach(get_navigation_links('primary_navigation') as $link)
-        <li>
-          <a href="{{ $link->url }}" class="nav__link">{{ $link->label }}</a>
+        <li class="menu__item">
+          <a href="{{ $link->url }}" class="menu__link @if($link->active) menu__link--active @endif">{{ $link->label }}</a>
         </li>
       @endforeach
       @if($cta)
-        <li>
-          <x-button class="nav__button" type="primary" :href="$cta['url']">{{ $cta['title'] }}</x-button>
+        <li class="menu__item">
+          <x-button class="menu__button" type="primary" :href="$cta['url']">{{ $cta['title'] }}</x-button>
         </li>
       @endif
-      <li class="nav__search-item">
-        <x-search class="nav__search"/>
+      <li class="menu__item menu__item--search">
+        <x-search class="menu__search"/>
       </li>
     </ul>
   @endif
