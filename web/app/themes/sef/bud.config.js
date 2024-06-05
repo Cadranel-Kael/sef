@@ -6,14 +6,14 @@
  *
  * @type {import('@roots/bud').Config}
  */
-export default async (app) => {
+export default async(app) => {
   /**
    * Application assets & entrypoints
    *
    * @see {@link https://bud.js.org/reference/bud.entry}
    * @see {@link https://bud.js.org/reference/bud.assets}
    */
-  app
+    app
     .entry('app', ['@scripts/app', '@styles/app'])
     .entry('editor', ['@scripts/editor', '@styles/editor'])
     .assets(['images', 'fonts']);
@@ -23,7 +23,7 @@ export default async (app) => {
    *
    * @see {@link https://bud.js.org/reference/bud.setPublicPath}
    */
-  app.setPublicPath('/app/themes/sage/public/');
+    app.setPublicPath('/app/themes/sage/public/');
 
   /**
    * Development server settings
@@ -32,7 +32,7 @@ export default async (app) => {
    * @see {@link https://bud.js.org/reference/bud.setProxyUrl}
    * @see {@link https://bud.js.org/reference/bud.watch}
    */
-  app
+    app
     .setUrl('http://localhost:3000')
     .setProxyUrl('https://sef.test')
     .watch(['resources/views', 'app']);
@@ -45,33 +45,57 @@ export default async (app) => {
    * @see {@link https://bud.js.org/extensions/sage/theme.json}
    * @see {@link https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json}
    */
-  app.wpjson
-    .setSettings({
-      background: {
-        backgroundImage: true,
-      },
-      color: {
-        custom: false,
-        customDuotone: false,
-        customGradient: false,
-        defaultDuotone: false,
-        defaultGradients: false,
-        defaultPalette: false,
-        duotone: [],
-      },
-      custom: {
-        spacing: {},
+    app.wpjson
+    .setOption('styles', {
         typography: {
-          'font-size': {},
-          'line-height': {},
+            fontFamily: `"Open Sans", sans-serif`,
+            name: "Open Sans",
+            slug: "open-sans",
+            fontFace: [{
+                fontFamily: "Open Sans",
+                src: ["file:./resources/fonts/OpenSans.ttf"],
+            }],
         },
-      },
-      spacing: {
-        padding: true,
-        units: ['px', '%', 'em', 'rem', 'vw', 'vh'],
-      },
-      typography: {
-        customFontSize: false,
-      },
     })
+    .setSettings({
+        background: {
+            backgroundImage: true,
+        },
+        color: {
+            custom: false,
+            customDuotone: false,
+            customGradient: false,
+            defaultDuotone: false,
+            defaultGradients: false,
+            defaultPalette: false,
+            duotone: [],
+            palette: [
+            {
+                name: 'Primary',
+                slug: 'primary',
+                color: '#FFF137',
+            },
+            {
+                name: 'Black',
+                slug: 'black',
+                color: '#2F2F2F',
+            },
+            ],
+        },
+        custom: {
+            spacing: {},
+            typography: {
+                'font-size': {},
+                'line-height': {},
+            },
+        },
+        spacing: {
+            padding: true,
+            units: ['px', '%', 'em', 'rem', 'vw', 'vh'],
+        },
+        typography: {
+            customFontSize: false,
+        },
+    })
+    .enable();
 };
