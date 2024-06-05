@@ -1,5 +1,6 @@
-<section style="{{ $block->inlineStyle }}" class="hero hero--{{ $alignment }} {{ $block->classes }}">
-  {!! wp_get_attachment_image($background, 'large', false, ['class' => 'hero__background']) !!}
+<section
+  style="{{ $block->inlineStyle }}; background-image: url({{ wp_get_attachment_image_url($background, 'full') }});"
+  class="hero hero--{{ $alignment }} {{ $block->classes }}">
   <div class="hero__container">
     {!! $heading !!}
     @if($text)
