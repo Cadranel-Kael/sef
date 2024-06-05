@@ -1,0 +1,54 @@
+@use '../../base/typography' as *;
+@use '../../base/sizes' as *;
+@use '../../base/colors' as *;
+@use '../../base/border' as *;
+@use '../../base/icons' as *;
+
+.houses {
+  padding-top: 12.1875rem;
+  @include max-column(12);
+  margin: auto;
+  &__title {
+    @include heading(2);
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+  }
+  &__house {
+    @include max-column(6);
+    display: flex;
+    margin-bottom: spacing('lg');
+    .house {
+      &__container {
+        position: relative;
+        background: $color-primary;
+        height: 100%;
+        margin: auto 0;
+        padding: 1.875rem 1.875rem 1.875rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: spacing('md');
+        border-radius: $border-radius;
+      }
+      &__title {
+        font-weight: bold;
+      }
+      &__places:before {
+        @include icon('people');
+        margin-right: spacing('xs');
+      }
+      &__beds:before {
+        @include icon('bed');
+        margin-right: spacing('xs');
+      }
+      &__address {
+        margin-top: spacing('md');
+      }
+      &__image {
+        border-radius: $border-radius;
+      }
+    }
+  }
+}
