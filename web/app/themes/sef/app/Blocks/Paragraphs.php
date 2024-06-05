@@ -68,7 +68,7 @@ class Paragraphs extends Block
      *
      * @var string
      */
-    public $mode = 'block';
+    public $mode = 'preview';
 
     /**
      * The default block alignment.
@@ -102,14 +102,9 @@ class Paragraphs extends Block
         'align_content' => false,
         'full_height' => false,
         'anchor' => false,
-        'mode' => false,
+        'mode' => true,
         'multiple' => true,
         'jsx' => true,
-        'color' => [
-            'background' => true,
-            'text' => true,
-            'gradient' => true,
-        ],
     ];
 
     /**
@@ -117,20 +112,14 @@ class Paragraphs extends Block
      *
      * @var array
      */
-    public $styles = ['light', 'dark'];
+    public $styles = [];
 
     /**
      * The block preview example data.
      *
      * @var array
      */
-    public $example = [
-        'items' => [
-            ['item' => 'Item one'],
-            ['item' => 'Item two'],
-            ['item' => 'Item three'],
-        ],
-    ];
+    public $example = [];
 
     /**
      * The block template.
@@ -161,6 +150,23 @@ class Paragraphs extends Block
 
         $paragraphs
             ->addRepeater('blocks')
+            ->addTrueFalse('image_field', [
+                'message' => 'Activer l\'image',
+                'default_value' => 0,
+            ])
+            ->addImage('image', [
+                'label' => 'Image',
+                'conditional_logic' => [
+                    [
+                        [
+                            'field' => 'image_field',
+                            'operator' => '==',
+                            'value' => '1',
+                        ],
+                    ],
+                ],
+                'return_format' => 'id',
+            ])
             ->addWysiwyg('heading', [
                 'toolbar' => 'basic',
                 'tabs' => 'visual',
