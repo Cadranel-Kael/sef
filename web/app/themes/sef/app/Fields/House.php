@@ -15,7 +15,7 @@ class House extends Field
         $house = Builder::make('house');
 
         $house
-            ->setLocation('post_type', '==', 'housing');
+            ->setLocation('post_type', '==', 'houses');
 
         $house
             ->addImage('image', ['return_format' => 'id'])
