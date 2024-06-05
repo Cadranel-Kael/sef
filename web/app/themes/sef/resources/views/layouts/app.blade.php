@@ -14,7 +14,7 @@
       <a class="sr-only focus:not-sr-only" href="#main">
         {{ __('Skip to content') }}
       </a>
-      <h1 class="sr-only">{{ get_the_title() }}</h1>
+      <h1 class="sr-only">{{ $title ?? get_the_title() }}</h1>
 
       @include('sections.header')
 
