@@ -108,7 +108,12 @@ function prefix_disable_gutenberg($current_status, $post_type)
 add_filter('use_block_editor_for_post_type', 'prefix_disable_gutenberg', 10, 2);
 
 
-function remove_posts_menu() {
+function remove_posts_menu(): void
+{
     remove_menu_page('edit.php');
 }
+
 add_action('admin_menu', 'remove_posts_menu');
+
+add_theme_support('editor-styles');
+add_editor_style(asset('editor.css')->relativePath(get_theme_file_path()));
