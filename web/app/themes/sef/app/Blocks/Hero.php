@@ -68,14 +68,14 @@ class Hero extends Block
      *
      * @var string
      */
-    public $mode = 'edit';
+    public $mode = 'preview';
 
     /**
      * The default block alignment.
      *
      * @var string
      */
-    public $align = 'full';
+    public $align = 'center';
 
     /**
      * The default block text alignment.
@@ -97,7 +97,7 @@ class Hero extends Block
      * @var array
      */
     public $supports = [
-        'align' => false,
+        'align' => true,
         'align_text' => false,
         'align_content' => false,
         'full_height' => true,
@@ -119,9 +119,7 @@ class Hero extends Block
      *
      * @var array
      */
-    public $template = [
-        'core/heading' => ['placeholder' => 'Hello World'],
-    ];
+    public $template = [];
 
     /**
      * The block field group.
