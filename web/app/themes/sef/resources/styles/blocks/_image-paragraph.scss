@@ -3,14 +3,16 @@
 
 .image-paragraph {
   max-width: 100vw;
-  //width: $max-site-width;
   margin: 0 spacing('sm');
-  //display: flex;
-  //flex-direction: row-reverse;
-  //gap: $column-gutter;
-  //align-items: center;
-  //justify-content: start;
+
+  @include screen-lg {
+    width: $max-site-width;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: $column-gutter;
+    align-items: center;
     justify-content: flex-start;
+  }
 
   &__container {
     @include max-column(6);
@@ -20,7 +22,7 @@
     @include heading(3);
 
     @include screen-lg {
-      @include heading(1);
+      @include heading(2);
     }
   }
 
@@ -28,6 +30,10 @@
     width: 100%;
     height: auto;
     object-fit: cover;
+
+    @include screen-lg {
+      @include square-column(3);
+    }
   }
 
 }
