@@ -1,50 +1,68 @@
 @use '../base/_sizes' as *;
 @use '../base/_colors' as *;
 @use '../utils/sr' as *;
+@use '../base/_border' as *;
 
 .nav {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-content: flex-end;
   justify-content: center;
   max-width: $max-site-width;
-  margin: auto;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
   color: $color-white;
   text-align: center;
+  border-radius: $border-radius;
+  z-index: 20;
 
   @include screen-lg {
+    box-sizing: border-box;
     flex-direction: row;
     color: $color-black;
+    padding: 0 spacing('md');
+    margin-top: spacing('lg');
+    background: $color-white;
   }
 
   &__home {
-    margin: 1rem auto 0;
+    margin: spacing('sm') 0;
     height: auto;
     width: 2.5rem;
     flex: 0 0 auto;
-    position: absolute;
   }
 
   &__logo {
     height: auto;
     width: 100%;
-    z-index: 13;
+
+    > * > * {
+      fill: $color-white;
+
+      @include screen-lg {
+        fill: $color-black;
+      }
+    }
   }
 
-  &__menu {
+  &__menu, .menu {
     display: flex;
     flex-direction: column;
     align-items: center;
     list-style: none;
+    justify-content: space-between;
     flex: 1 0 auto;
     background: $color-black;
+    padding-bottom: spacing('lg');
 
     @include screen-lg {
       background: none;
-      margin: auto auto 0 0;
       flex-direction: row;
       justify-content: flex-end;
       flex: auto;
+      padding-bottom: 0;
     }
 
     @include screen-md {
@@ -57,43 +75,75 @@
 
       &--open {
         background: $color-black;
-        position: fixed;
         z-index: 10;
+        position: absolute;
+        top: 0;
+        bottom: 0;
       }
     }
-  }
 
-  &__link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    padding: 1rem 0;
+    &__item {
+      &--logo {
+        order: -2;
+        margin-top: spacing('md');
+      }
 
-    &:hover {
-      text-decoration: underline;
+      &--search {
+        order: -1;
+
+        @include screen-lg {
+          order: inherit;
+        }
+      }
+
+      @include screen-lg {
+        height: 100%;
+      }
     }
 
-    @include screen-lg {
-      margin-right: 1.25rem;
+    &__logo {
+      display: initial;
+      width: 2.5rem;
+      height: auto;
+
+      > * > * {
+        fill: $color-white;
+      }
+
+      @include screen-lg {
+        display: none;
+        width: 0;
+        padding: 0;
+      }
     }
-  }
 
-  &__button {
-    align-self: center;
-    margin-right: 2.5rem;
-  }
+    &__link {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      align-items: center;
 
-  &__search-item {
-    order: -1;
+      &:hover, &:focus {
+        background: $color-grey;
+      }
 
-    @include screen-lg {
-      order: inherit;
+      &--active {
+        @include screen-lg {
+          color: $color-black;
+          border-bottom: $color-black 0.25rem solid;
+          box-sizing: border-box;
+        }
+      }
+
+      @include screen-lg {
+        padding: 0 1.25rem;
+        height: 100%;
+      }
     }
-  }
 
-  &__search {
-    &:before {
-
+    &__button {
+      align-self: center;
+      margin-right: 2.5rem;
     }
   }
 }
