@@ -10,6 +10,7 @@
   //gap: $column-gutter;
   //align-items: center;
   //justify-content: start;
+    justify-content: flex-start;
 
   &__container {
     @include max-column(6);
