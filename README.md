@@ -55,26 +55,26 @@ This project involves the rebranding and recreation of the website for SEF, a be
    ```bash
    composer create-project roots/bedrock
    ```
-2. **Set Up Environment Variables**:
+3. **Set Up Environment Variables**:
    Create a `.env` file in the root directory and add the necessary environment variables (see .env.example as an example)
-3. **Clone the Repository**:
+4. **Clone the Repository**:
    ```bash
    git clone https://github.com/Cadranel-Kael/sef.git
    ```
-4. **Install Dependencies**:
+5. **Install Dependencies**:
    ```bash
    composer install
    ```
-5. **Navigate to the SEF Directory**:
+6. **Navigate to the SEF Directory**:
    ```bash
    cd web/app/themes/sef
    ```
-6. **Install Dependencies**:
+7. **Install Dependencies**:
    ```bash
    composer install
    yarn
    ```
-7. **Configure Bud.js with your local dev URL**
+8. **Configure Bud.js with your local dev URL**
    ```javascript
    app
     .setUrl(3000)
@@ -82,7 +82,7 @@ This project involves the rebranding and recreation of the website for SEF, a be
     .setProxyUrl(8080)
     .setPublicProxyUrl(`http://example.test`)
    ```
-8. **Build the application**:
+9. **Build the application**:
    ```bash
    yarn build
    ```
