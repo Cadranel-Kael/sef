@@ -44,11 +44,11 @@ This project involves the rebranding and recreation of the website for SEF, a be
 
 ## Installation Instructions
 
-**Requirements
+**Requirements**
 - PHP >= 8.0
 - Composer
-- yarn
-- ACF pro
+- [yarn](https://yarnpkg.com/)
+- [ACF pro](https://www.advancedcustomfields.com/pro/)
 
 1. **Create a Bedrock Project**
    [Bedrock Documentation](https://roots.io/bedrock/docs/installation/)
