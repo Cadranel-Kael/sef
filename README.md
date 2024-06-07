@@ -1,62 +1,134 @@
-<p align="center">
-  <a href="https://roots.io/bedrock/">
-    <img alt="Bedrock" src="https://cdn.roots.io/app/uploads/logo-bedrock.svg" height="100">
-  </a>
-</p>
+# SEF Website Rebranding and Recreation Project
 
-<p align="center">
-  <a href="https://packagist.org/packages/roots/bedrock">
-    <img alt="Packagist Installs" src="https://img.shields.io/packagist/dt/roots/bedrock?label=projects%20created&colorB=2b3072&colorA=525ddc&style=flat-square">
-  </a>
+## Table of Contents
 
-  <a href="https://packagist.org/packages/roots/wordpress">
-    <img alt="roots/wordpress Packagist Downloads" src="https://img.shields.io/packagist/dt/roots/wordpress?label=roots%2Fwordpress%20downloads&logo=roots&logoColor=white&colorB=2b3072&colorA=525ddc&style=flat-square">
-  </a>
-  
-  <img src="https://img.shields.io/badge/dynamic/json.svg?url=https://raw.githubusercontent.com/roots/bedrock/master/composer.json&label=wordpress&logo=roots&logoColor=white&query=$.require[%22roots/wordpress%22]&colorB=2b3072&colorA=525ddc&style=flat-square">
+1. [Project Overview](#project-overview)
+2. [Goals and Objectives](#goals-and-objectives)
+3. [Project Scope](#project-scope)
+4. [Technologies Used](#technologies-used)
+5. [Installation Instructions](#installation-instructions)
+6. [Usage Instructions](#usage-instructions)
+7. [Project Structure](#project-structure)
+8. [Contributing](#contributing)
+9. [Contact Information](#contact-information)
 
-  <a href="https://github.com/roots/bedrock/actions/workflows/ci.yml">
-    <img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/roots/bedrock/ci.yml?branch=master&logo=github&label=CI&style=flat-square">
-  </a>
+## Project Overview
 
-  <a href="https://twitter.com/rootswp">
-    <img alt="Follow Roots" src="https://img.shields.io/badge/follow%20@rootswp-1da1f2?logo=twitter&logoColor=ffffff&message=&style=flat-square">
-  </a>
-</p>
+This project involves the rebranding and recreation of the website for SEF, a belgian non-profit organization dedicated to helping the homeless by giving them a home and giving opportunities to reintegrate society. The goal is to enhance the online presence of SEF, making it more appealing and user-friendly, while accurately representing the organization's mission and values.
 
-<p align="center">WordPress boilerplate with Composer, easier configuration, and an improved folder structure</p>
+## Goals and Objectives
 
-<p align="center">
-  <a href="https://roots.io/bedrock/">Website</a> &nbsp;&nbsp; <a href="https://roots.io/bedrock/docs/installation/">Documentation</a> &nbsp;&nbsp; <a href="https://github.com/roots/bedrock/releases">Releases</a> &nbsp;&nbsp; <a href="https://discourse.roots.io/">Community</a>
-</p>
+- **Rebranding**: Update the visual identity of SEF to create a modern and cohesive brand image.
+- **Website Redesign**: Develop a new website that is aesthetically pleasing, easy to navigate, and accessible.
+- **Content Management**: Implement a content management system (CMS) to allow SEF staff to easily update and manage the website content.
+- **Responsive Design**: Ensure the website is fully responsive and functions well on various devices (desktops, tablets, and smartphones).
+- **SEO Optimization**: Optimize the website for search engines to increase visibility and reach.
 
-## Sponsors
+## Project Scope
 
-Bedrock is an open source project and completely free to use. If you've benefited from our projects and would like to support our future endeavors, please consider [sponsoring Roots](https://github.com/sponsors/roots).
+- **Brand Identity**: Design a new logo, color scheme, typography, and other branding elements.
+- **Website Design**: Create wireframes and mockups for the new website layout.
+- **Development**: Code the new website using modern web development technologies.
+- **Content Migration**: Transfer existing content to the new website, ensuring it is formatted correctly.
+- **Testing**: Conduct thorough testing to identify and fix any issues.
+- **Launch**: Deploy the new website and ensure a smooth transition from the old site.
 
-<div align="center">
-<a href="https://k-m.com/"><img src="https://cdn.roots.io/app/uploads/km-digital.svg" alt="KM Digital" width="120" height="90"></a> <a href="https://carrot.com/"><img src="https://cdn.roots.io/app/uploads/carrot.svg" alt="Carrot" width="120" height="90"></a> <a href="https://wordpress.com/"><img src="https://cdn.roots.io/app/uploads/wordpress.svg" alt="WordPress.com" width="120" height="90"></a> <a href="https://worksitesafety.ca/careers/"><img src="https://cdn.roots.io/app/uploads/worksite-safety.svg" alt="Worksite Safety" width="120" height="90"></a> <a href="https://www.copiadigital.com/"><img src="https://cdn.roots.io/app/uploads/copia-digital.svg" alt="Copia Digital" width="120" height="90"></a> <a href="https://www.freave.com/"><img src="https://cdn.roots.io/app/uploads/freave.svg" alt="Freave" width="120" height="90"></a>
-</div>
+## Technologies Used
 
-## Overview
+- **Frontend**: HTML5, CSS3, Typescript
+- **Backend**: Bedrock, Acorn, Sage 10
+- **Database**: SQL
+- **CMS**: WordPress
+- **Version Control**: Git, GitHub
+- **Design Tools**: Adobe Photoshop, Adobe Illustrator, Figma
 
-Bedrock is a WordPress boilerplate for developers that want to manage their projects with Git and Composer. Much of the philosophy behind Bedrock is inspired by the [Twelve-Factor App](http://12factor.net/) methodology, including the [WordPress specific version](https://roots.io/twelve-factor-wordpress/).
+## Installation Instructions
 
-- Better folder structure
-- Dependency management with [Composer](https://getcomposer.org)
-- Easy WordPress configuration with environment specific files
-- Environment variables with [Dotenv](https://github.com/vlucas/phpdotenv)
-- Autoloader for mu-plugins (use regular plugins as mu-plugins)
-- Enhanced security (separated web root and secure passwords with [wp-password-bcrypt](https://github.com/roots/wp-password-bcrypt))
+**Requirements
+- PHP >= 8.0
+- Composer
+- yarn
+- ACF pro
 
-## Getting Started
+1. **Create a Bedrock Project**
+   [Bedrock Documentation](https://roots.io/bedrock/docs/installation/)
+   ```bash
+   composer create-project roots/bedrock
+   ```
+2. **Set Up Environment Variables**:
+   Create a `.env` file in the root directory and add the necessary environment variables (see .env.example as an example)
+3. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/Cadranel-Kael/sef.git
+   ```
+4. **Install Dependencies**:
+   ```bash
+   composer install
+   ```
+5. **Navigate to the SEF Directory**:
+   ```bash
+   cd web/app/themes/sef
+   ```
+6. **Install Dependencies**:
+   ```bash
+   composer install
+   yarn
+   ```
+7. **Configure Bud.js with your local dev URL**
+   ```javascript
+   app
+    .setUrl(3000)
+    .setPublicUrl(`http://example.test:3000`)
+    .setProxyUrl(8080)
+    .setPublicProxyUrl(`http://example.test`)
+   ```
+8. **Build the application**:
+   ```bash
+   yarn build
+   ```
+8. **Run the Development Server**:
+   ```bash
+   yarn dev
+   ```
+   
+## Project Structure
 
-See the [Bedrock installation documentation](https://roots.io/bedrock/docs/installation/).
+```
+themes/sef/   # → Root of your Sage based theme
+├── app/                  # → Theme PHP
+│   ├── Providers/        # → Service providers
+│   ├── View/             # → View models
+│   ├── filters.php       # → Theme filters
+│   └── setup.php         # → Theme setup
+├── composer.json         # → Autoloading for `app/` files
+├── public/               # → Built theme assets (never edit)
+├── functions.php         # → Theme bootloader
+├── index.php             # → Theme template wrapper
+├── node_modules/         # → Node.js packages (never edit)
+├── package.json          # → Node.js dependencies and scripts
+├── resources/            # → Theme assets and templates
+│   ├── fonts/            # → Theme fonts
+│   ├── images/           # → Theme images
+│   ├── scripts/          # → Theme javascript
+│   ├── styles/           # → Theme stylesheets
+│   └── views/            # → Theme templates
+│       ├── components/   # → Component templates
+│       ├── forms/        # → Form templates
+│       ├── layouts/      # → Base templates
+│       └── partials/     # → Partial templates
+├── screenshot.png        # → Theme screenshot for WP admin
+├── style.css             # → Theme meta information
+├── vendor/               # → Composer packages (never edit)
+└── bud.config.js         # → Bud configuration
+```
 
-## Stay Connected
+## Contact Information
 
-- Join us on Discord by [sponsoring us on GitHub](https://github.com/sponsors/roots)
-- Participate on [Roots Discourse](https://discourse.roots.io/)
-- Follow [@rootswp on Twitter](https://twitter.com/rootswp)
-- Read the [Roots Blog](https://roots.io/blog/)
-- Subscribe to the [Roots Newsletter](https://roots.io/newsletter/)
+For any questions or suggestions, please contact:
+
+- **Project Lead**: Kael Cadranel
+- **Email**: kael.cadranel00@gmail.com
+
+---
+
+Thank you for your interest in the SEF Website Rebranding and Recreation Project!
