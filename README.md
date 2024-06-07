@@ -7,9 +7,7 @@
 3. [Project Scope](#project-scope)
 4. [Technologies Used](#technologies-used)
 5. [Installation Instructions](#installation-instructions)
-6. [Usage Instructions](#usage-instructions)
 7. [Project Structure](#project-structure)
-8. [Contributing](#contributing)
 9. [Contact Information](#contact-information)
 
 ## Project Overview
