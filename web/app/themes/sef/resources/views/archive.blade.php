@@ -1,5 +1,5 @@
-@extends('layouts.app', ['title' => get_post_type_object(get_post_type())->label])
+I@extends('layouts.app', ['title' => $title])
 
 @section('content')
-  @includeFirst(['archives.archive-' . get_post_type(), 'partials.content-single'])
+  @include('partials.archives.archive-' . get_queried_object()->name)
 @endsection
