@@ -1,0 +1,67 @@
+@use '../../base/typography' as *;
+@use '../../base/sizes' as *;
+@use '../../base/colors' as *;
+@use '../../base/border' as *;
+@use '../../base/icons' as *;
+
+.shops {
+  padding-top: 12.1875rem;
+  @include max-column(12);
+  margin: auto;
+
+  &__title {
+    @include heading(2);
+    margin-bottom: spacing('sm');
+  }
+
+  &__container {
+    margin-top: spacing('xl');
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+  }
+
+  &__shop {
+    @include max-column(4);
+    display: flex;
+    position: relative;
+    background: $color-primary;
+    height: 100%;
+    margin: auto 0;
+    flex-direction: column;
+    align-items: center;
+    border-radius: $border-radius;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: translateY(-0.5rem);
+    }
+
+    .shop {
+      &__title {
+        font-weight: bold;
+        margin-top: spacing('md');
+        margin-bottom: spacing('xxs');
+      }
+
+      &__address {
+        margin-top: spacing('md');
+        margin-bottom: spacing('lg');
+      }
+
+      &__image {
+        width: 100%;
+        height: auto;
+        border-radius: $border-radius $border-radius 0 0;
+      }
+      &__link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        text-indent: -9999px;
+      }
+    }
+  }
+}
