@@ -14,25 +14,59 @@ return [
 
     'post' => [
         'Teams' => [
-            'enter_title_here' => 'Enter Team Here',
+            'enter_title_here' => 'Entrer le titre de l\'équipe ici',
             'menu_icon' => 'dashicons-groups',
-            'supports' => ['title', 'editor', 'author', 'revisions', 'thumbnail'],
+            'supports' => ['title', 'revisions', 'thumbnail'],
             'show_in_rest' => true,
             'has_archive' => false,
+            'menu_position' => 22,
             'labels' => [
-                'singular' => 'Team',
-                'plural' => 'Teams',
+                'singular' => 'Équipe',
+                'plural' => 'Équipes',
             ],
         ],
-        'Housing' => [
-            'enter_title_here' => 'Enter House Here',
+        'Houses' => [
+            'enter_title_here' => 'Entrer le titre de la maison ici',
             'menu_icon' => 'dashicons-admin-home',
-            'supports' => ['title', 'editor', 'author', 'revisions', 'thumbnail'],
+            'supports' => ['title'],
+            'show_in_rest' => true,
+            'menu_position' => 23,
+            'has_archive' => true,
+            'labels' => [
+                'singular' => 'Hébergement',
+                'plural' => 'Hébergements',
+            ],
+            'rewrite' => [
+                'slug' => 'hebergements',
+                'with_front' => false
+            ]
+        ],
+        'Shops' => [
+            'enter_title_here' => 'Entrer le titre de du magasin ici',
+            'menu_icon' => 'dashicons-cart',
+            'supports' => ['title'],
+            'menu_position' => 24,
             'show_in_rest' => true,
             'has_archive' => true,
             'labels' => [
-                'singular' => 'House',
-                'plural' => 'House',
+                'singular' => 'Magasin',
+                'plural' => 'Magasins',
+            ],
+        ],
+        'News' => [
+            'enter_title_here' => 'Entrer le titre de l\'actualité ici',
+            'menu_icon' => 'dashicons-admin-site-alt3',
+            'supports' => ['title'],
+            'menu_position' => 25,
+            'show_in_rest' => true,
+            'has_archive' => true,
+            'labels' => [
+                'singular' => 'Actualité',
+                'plural' => 'Actualités',
+            ],
+            'rewrite' => [
+                'slug' => 'actualites',
+                'with_front' => false
             ],
         ],
     ],
@@ -48,8 +82,12 @@ return [
     */
 
     'taxonomy' => [
-        'genre' => [
-            'links' => ['book'],
+        'custom_category' => [
+            'labels' => [
+                'singular' => 'Catégorie',
+                'plural' => 'Catégories',
+            ],
+            'links' => ['news'],
             'meta_box' => 'radio',
         ],
     ],
