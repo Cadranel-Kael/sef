@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "46929e225966794fde365e58bc6ac67c",
+    "content-hash": "6ec7d6e3252b116149a76b6d36bdcf0f",
     "packages": [
         {
             "name": "composer/installers",
@@ -396,16 +396,16 @@
         },
         {
             "name": "log1x/poet",
-            "version": "v2.0.9",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Log1x/poet.git",
-                "reference": "9a7c17f441d88d6ace41f9300228bf1f4704878d"
+                "reference": "537649337e6a628991cf10effde1d9e34fbe3a27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Log1x/poet/zipball/9a7c17f441d88d6ace41f9300228bf1f4704878d",
-                "reference": "9a7c17f441d88d6ace41f9300228bf1f4704878d",
+                "url": "https://api.github.com/repos/Log1x/poet/zipball/537649337e6a628991cf10effde1d9e34fbe3a27",
+                "reference": "537649337e6a628991cf10effde1d9e34fbe3a27",
                 "shasum": ""
             },
             "require": {
@@ -446,7 +446,7 @@
             ],
             "support": {
                 "issues": "https://github.com/log1x/poet/issues",
-                "source": "https://github.com/Log1x/poet/tree/v2.0.9"
+                "source": "https://github.com/Log1x/poet/tree/v2.1.0"
             },
             "funding": [
                 {
@@ -454,7 +454,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-11-16T23:04:37+00:00"
+            "time": "2024-06-05T23:34:45+00:00"
         },
         {
             "name": "oscarotero/env",
