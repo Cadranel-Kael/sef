@@ -1,0 +1,66 @@
+@use '../../base/typography' as *;
+@use '../../base/sizes' as *;
+@use '../../base/colors' as *;
+@use '../../base/border' as *;
+@use '../../base/icons' as *;
+
+.news {
+  margin: spacing('xl') spacing('sm');
+
+  @include screen-lg {
+    @include max-column(12);
+    margin: spacing('xxxl') auto;
+  }
+
+  &__title {
+    @include heading(3);
+
+    @include screen-lg {
+      @include heading(2);
+      margin-bottom: spacing('lg');
+    }
+  }
+
+  &__container {
+    @include screen-lg {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__article {
+    border-radius: $border-radius;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+    background: $color-white;
+
+    .article {
+      &__container {
+        display: flex;
+        flex-direction: column;
+      }
+      &__image {
+        width: 100%;
+        object-fit: cover;
+      }
+      &__title {
+        font-weight: bold;
+        margin: 0 spacing('xs');
+      }
+      &__type {
+        margin: 0 spacing('xs') spacing('xs');
+      }
+      &__date {
+        margin: 0 spacing('xs') spacing('xs');
+        color: $color-grey;
+      }
+      &__link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        text-indent: -9999%;
+      }
+    }
+  }
+}
