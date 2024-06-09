@@ -9,13 +9,13 @@ class ArchiveShops extends Composer
     protected $acf = true;
 
     protected static $views = [
-        'archive-shops',
+        'partials.archives.archive-shops',
     ];
 
     public function with()
     {
         return [
-            'houses' => $this->shops(),
+            'shops' => $this->shops(),
         ];
     }
 
@@ -29,11 +29,9 @@ class ArchiveShops extends Composer
         ]))->map(function ($shop) {
             $shopObject = new \stdClass();
             $shopObject->title = get_the_title($shop);
-            $shopObject->permalink = get_permalink($shop);
             $shopObject->image = get_field('image', $shop);
-            $shopObject->places = get_field('places', $shop);
-            $shopObject->beds = get_field('beds', $shop);
-            $shopObject->address = get_field('address', $shop);
+            $shopObject->type = get_field('type', $shop);
+            $shopObject->location = get_field('location', $shop);
             $shopObject->link = get_permalink($shop);
             return $shopObject;
         });
