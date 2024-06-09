@@ -2,18 +2,21 @@ $max-site-width: 82rem;
 $margin-site: 2.8%;
 
 $spacing: (
-  'xxs': 0.25rem, // 4px
-  'xs': 0.5rem, // 8px
+  'xxxs': 0.25rem, // 4px
+  'xxs': 0.5rem, // 8px
+  'xs': 0.75rem, // 12px
   'sm': 1rem, // 16px
   'md': 2rem, // 32px
   'lg': 4rem, // 64px
   'xl': 8rem, // 128px
   'xxl': 10rem, // 160px
-  'xxxl': 16rem, // 256px
+  'xxxl': 14rem, // 224px
+  'xxxxl': 20rem, // 320px
 );
 
 $column-width: 5rem;
 $column-gutter: 2rem;
+
 
 @mixin max-column($number) {
   max-width: (($column-width+$column-gutter)*$number)-$column-gutter;
@@ -39,7 +42,7 @@ $column-gutter: 2rem;
 }
 
 @mixin screen-md {
-  @media (max-width: 820px) {
+  @media (max-width: 1079px) {
     @content
   }
 }
