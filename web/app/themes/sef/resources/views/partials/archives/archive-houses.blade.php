@@ -2,7 +2,7 @@
   <div class="houses__title">Nos <strong>hébergements</strong></div>
   <div class="houses__container">
     @if($houses->isEmpty())
-      Il y a pas d'hébergements a afficher.
+      Il y a pas d’hébergements à afficher.
     @endif
     @foreach($houses as $house)
       <article class="houses__house house">
