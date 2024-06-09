@@ -4,7 +4,7 @@
 @use '../base/_border' as *;
 
 .nav {
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-content: flex-end;
@@ -124,7 +124,7 @@
       align-items: center;
 
       &:hover, &:focus {
-        background: $color-grey;
+        background: $color-grey--lightest;
       }
 
       &--active {
