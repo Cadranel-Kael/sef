@@ -17,10 +17,12 @@ class SingleShops extends Composer
         return [
             'title' => get_the_title(),
             'type' => get_field('type'),
+            'image' => get_field('image'),
             'location' => get_field('location'),
             'days' => $this->days(),
-            'phone' => get_field('phone'),
-            'website' => get_field('website'),
+            'shopPhone' => get_field('phone') ? get_field('phone') : null,
+            'shopWebsite' => get_field('website') ? get_field('website') : null,
+            'shopEmail' => get_field('website') ? get_field('website') : null,
         ];
     }
 
