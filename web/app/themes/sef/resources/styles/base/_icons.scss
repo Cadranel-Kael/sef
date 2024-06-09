@@ -4,6 +4,10 @@ $icons: (
   'cheveron-down': '\e903',
   'bed': '\e902',
   'people': '\e904',
+  'phone': '\e906',
+  'web': '\e907',
+  'mail': '\e908',
+  'location': '\e909',
 );
 
 @mixin icon($name) {
