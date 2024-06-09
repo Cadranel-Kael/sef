@@ -5,23 +5,38 @@
 @use '../../base/icons' as *;
 
 .shops {
-  padding-top: 12.1875rem;
-  @include max-column(12);
-  margin: auto;
+  margin: spacing('xxl') spacing('sm') spacing('md') spacing('sm');
+
+  @include screen-lg {
+    @include max-column(12);
+    margin: spacing('xxl') auto spacing('lg') auto;
+  }
 
   &__title {
-    @include heading(2);
+    @include heading(3);
     margin-bottom: spacing('sm');
+
+    @include screen-lg {
+      @include heading(2);
+    }
   }
 
   &__container {
-    margin-top: spacing('xl');
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
     align-items: flex-start;
+    width: 100%;
+    margin-top: spacing('md');
+
+    @include screen-lg {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: spacing('lg');
+    }
   }
 
-  &__shop {
+  &__card {
+    width: 100%;
     @include max-column(4);
     display: flex;
     position: relative;
@@ -37,7 +52,7 @@
       transform: translateY(-0.5rem);
     }
 
-    .shop {
+    .card {
       &__title {
         font-weight: bold;
         margin-top: spacing('md');

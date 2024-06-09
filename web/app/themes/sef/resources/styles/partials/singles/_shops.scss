@@ -1,0 +1,116 @@
+@use '../../base/typography' as *;
+@use '../../base/sizes' as *;
+@use '../../base/colors' as *;
+@use '../../base/border' as *;
+@use '../../base/icons' as *;
+
+.shop {
+  margin: spacing('xxl') spacing('sm') spacing('md') spacing('sm');
+
+  @include screen-lg {
+    @include max-column(12);
+    margin: spacing('xxl') auto spacing('lg') auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    > * {
+      grid-column: 1;
+    }
+  }
+
+  &__title {
+    @include heading(3);
+    margin-bottom: spacing('xs');
+
+    @include screen-lg {
+      @include heading(2);
+    }
+  }
+
+  &__type {
+    color: $color-grey;
+  }
+
+  &__info {
+    margin-bottom: spacing('sm');
+    &:before {
+      margin-right: spacing('xs');
+    }
+  }
+
+  &__phone {
+    color: $color-black;
+    display: inline-block;
+    &:before {
+      text-decoration: none;
+      display:inline-block;
+      @include icon('phone');
+    }
+  }
+
+  &__email:before {
+    @include icon('email');
+  }
+
+  &__address:before {
+    @include icon('location');
+  }
+
+  &__email:before {
+    @include icon('email');
+  }
+
+  &__image {
+    border-radius: $border-radius;
+    width: 100%;
+    height: auto;
+    grid-column: 2;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: spacing('md');
+    align-items: stretch;
+    width: 100%;
+    margin-top: spacing('md');
+
+    @include screen-lg {
+      margin-top: spacing('lg');
+    }
+
+    .container {
+      &__title {
+        font-weight: bold;
+        margin-bottom: spacing('sm');
+      }
+    }
+  }
+
+  &__schedule {
+    text-align: start;
+    border-radius: $border-radius;
+
+    .schedule {
+
+      &__title {
+        font-weight: bold;
+        margin-bottom: spacing('sm');
+        display: inline-block;
+      }
+
+      &__row {
+        margin-bottom: spacing('xs');
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      &__days {
+        @include text('small');
+        font-weight: bold;
+        display: inline-block;
+        margin-right: spacing('md');
+      }
+    }
+  }
+}
