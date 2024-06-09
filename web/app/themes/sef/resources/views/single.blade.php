@@ -1,7 +1,5 @@
-@extends('layouts.app')
+@extends('layouts.app', ['title' => get_the_title()])
 
 @section('content')
-  @while(have_posts()) @php(the_post())
-    @includeFirst(['partials.content-single-' . get_post_type(), 'partials.content-single'])
-  @endwhile
+  @include('partials.singles.single-' . get_post_type())
 @endsection
