@@ -13,7 +13,7 @@ class ArchiveHouses extends Composer
      * @var string[]
      */
     protected static $views = [
-        'archives.archive-houses',
+        'partials.archives.archive-houses',
     ];
 
     public function with()
