@@ -28,7 +28,6 @@ require $composer;
 | the IoC container for the system binding all of the various parts.
 |
 */
-
 if (!function_exists('\Roots\bootloader')) {
     wp_die(
         __('You need to install Acorn to use this theme.', 'sage'),
@@ -66,6 +65,7 @@ collect(['setup', 'filters'])
 
 function get_navigation_links(string $location): array
 {
+    global $wp;
     $locations = get_nav_menu_locations();
     $menuId = $locations[$location] ?? null;
     if (is_null($menuId)) {
@@ -78,7 +78,7 @@ function get_navigation_links(string $location): array
         $items[$key] = new stdClass();
         $items[$key]->url = $item->url;
         $items[$key]->label = $item->title;
-        if (get_permalink() === $item->url) {
+        if (home_url($wp->request) . '/' === $item->url) {
             $items[$key]->active = true;
         } else {
             $items[$key]->active = false;
@@ -97,17 +97,6 @@ function add_file_types_to_uploads($file_types): array
 
 add_filter('upload_mimes', 'add_file_types_to_uploads');
 
-
-function prefix_disable_gutenberg($current_status, $post_type)
-{
-    if ($post_type === 'teams' || $post_type === 'housing') {
-        return false;
-    }
-    return $current_status;
-}
-add_filter('use_block_editor_for_post_type', 'prefix_disable_gutenberg', 10, 2);
-
-
 function remove_posts_menu(): void
 {
     remove_menu_page('edit.php');
@@ -117,3 +106,35 @@ add_action('admin_menu', 'remove_posts_menu');
 
 add_theme_support('editor-styles');
 add_editor_style(asset('editor.css')->relativePath(get_theme_file_path()));
+
+function human_time_diff_fr($from, $to = ''): array|string
+{
+    if (empty($to)) {
+        $to = current_time('timestamp');
+    }
+
+    $diff = human_time_diff($from, $to);
+
+    $translation = [
+        'seconds' => 'secondes',
+        'second' => 'seconde',
+        'minutes' => 'minutes',
+        'minute' => 'minute',
+        'hours' => 'heures',
+        'hour' => 'heure',
+        'days' => 'jours',
+        'day' => 'jour',
+        'weeks' => 'semaines',
+        'week' => 'semaine',
+        'months' => 'mois',
+        'month' => 'mois',
+        'years' => 'ans',
+        'year' => 'an',
+    ];
+
+    foreach ($translation as $en => $fr) {
+        $diff = str_replace($en, $fr, $diff);
+    }
+
+    return $diff;
+}
