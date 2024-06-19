@@ -1,0 +1,94 @@
+@use '../components/_buttons' as *;
+@use '../base/_typography' as *;
+@use '../base/_colors' as *;
+@use '../base/_border' as *;
+@use '../base/_sizes' as *;
+@use '../utils/_sr' as *;
+
+.gform_wrapper {
+  @include max-column(12);
+  margin: auto;
+}
+
+.gform_wrapper li {
+}
+
+.gform_title {
+  @include sr-only;
+}
+
+.gform_wrapper form {
+  margin-bottom: 0;
+}
+
+.gform_wrapper .gfield_required {
+  color: $color-alert;
+}
+
+.gsection_title {
+  @include text(large, bold);
+}
+
+.ginput_container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gform-grid-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.ginput_container input,
+.ginput_container select,
+.ginput_container textarea {
+  @include text(normal);
+  border: $border-width solid $color-black;
+  border-radius: $border-radius;
+  padding: spacing(sm-md) spacing(sm);
+}
+
+.ginput_full {
+  width: 100%;
+}
+
+.ginput_container textarea {
+  height: auto;
+}
+
+.gform_button {
+  @include button(primary);
+}
+
+.gform_wrapper, .gfield_error {
+  input,
+  select,
+  textarea {
+    @include text(small);
+    border: $border-width solid $color-grey;
+    border-radius: $border-radius;
+    ::placeholder {
+      color: $color-grey;
+    }
+  }
+}
+
+.validation_message {
+  color: $color-alert;
+}
+
+.validation_error {
+
+}
+
+.gfield--type-honeypot {
+  @include sr-only;
+}
+
+#gforms_confirmation_message {
+}
+
+.gform_confirmation_message {
+  min-height: 200px;
+  text-align: center;
+}
