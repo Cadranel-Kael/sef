@@ -29,6 +29,9 @@ class ThemeOptions extends Field
         $themeOptions = Builder::make('theme_options');
 
         $themeOptions
+            ->addTab('General', [
+                'placement' => 'left',
+            ])
             ->addImage('site-logo', [
                 'label' => 'Logo',
                 'return_format' => 'id',
@@ -43,6 +46,9 @@ class ThemeOptions extends Field
             ->addText('address', [
                 'label' => 'Adresse',
             ])
+            ->addTab('Boutons', [
+                'placement' => 'left',
+            ])
             ->addLink('cta-nav-button', [
                 'label' => 'Bouton de navigation CTA',
             ])
@@ -52,8 +58,27 @@ class ThemeOptions extends Field
             ->addLink('cta-2', [
                 'label' => 'Bouton CTA nº2',
             ])
+            ->addTab('Image de fond', [
+                'placement' => 'left',
+            ])
             ->addImage('hero-image', [
                 'label' => 'Image de fond de l\'en-tête par défaut',
+                'return_format' => 'id',
+            ])
+            ->addImage('article-image', [
+                'label' => 'Image par défaut des articles qui n’ont pas d’image',
+                'return_format' => 'id',
+            ])
+            ->addImage('shop-image', [
+                'label' => 'Image de fond pour la page magasins',
+                'return_format' => 'id',
+            ])
+            ->addImage('contact-image', [
+                'label' => 'Image de fond pour la page contact',
+                'return_format' => 'id',
+            ])
+            ->addImage('donation-image', [
+                'label' => 'Image de fond pour la page don',
                 'return_format' => 'id',
             ]);
 

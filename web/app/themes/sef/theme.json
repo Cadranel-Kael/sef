@@ -13,8 +13,12 @@
       "defaultDuotone": false,
       "defaultGradients": false,
       "defaultPalette": false,
-      "duotone": [],
       "palette": [
+        {
+          "name": "White",
+          "slug": "white",
+          "color": "#FFFFFF"
+        },
         {
           "name": "Primary",
           "slug": "primary",
@@ -27,12 +31,9 @@
         }
       ]
     },
-    "custom": {
-      "spacing": {},
-      "typography": {
-        "font-size": {},
-        "line-height": {}
-      }
+    "lineHeight": {
+      "body": 1.6,
+      "heading": 1.1
     },
     "spacing": {
       "padding": true,
@@ -43,10 +44,12 @@
         "rem",
         "vw",
         "vh"
-      ]
+      ],
+      "blockGap": true
     },
+    "layout": {},
     "typography": {
-      "customFontSize": false
+      "customFontSize": true
     }
   },
   "styles": {

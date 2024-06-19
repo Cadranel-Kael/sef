@@ -24,14 +24,17 @@ class SingleNews extends Composer
         ];
     }
 
-    public function articles(): \Illuminate\Support\Collection
+    public function articles()
     {
-        return collect(get_field('content'))->map(function ($content) {
-            $contentObject = new \stdClass();
-            $contentObject->title = $content['title'];
-            $contentObject->text = $content['text'];
-            return $contentObject;
-        });
+        if (get_field('content')) {
+            return collect(get_field('content'))->map(function ($content) {
+                $contentObject = new \stdClass();
+                $contentObject->title = $content['title'];
+                $contentObject->text = $content['text'];
+                return $contentObject;
+            });
+        }
+        return null;
     }
 
     public function date(): string
@@ -50,7 +53,7 @@ class SingleNews extends Composer
             'sort' => 'DESC',
             'orderby' => 'meta_value',
             'meta_key' => 'date',
-            'post__not_in'   => [get_the_ID()],
+            'post__not_in' => [get_the_ID()],
         ]);
 
 

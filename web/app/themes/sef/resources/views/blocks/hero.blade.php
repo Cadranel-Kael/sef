@@ -10,4 +10,7 @@
   <figure class="hero__figure">
     {!! wp_get_attachment_image($image, 'large', false, ['class' => 'hero__image']) !!}
   </figure>
+  <div>
+    <InnerBlocks />
+  </div>
 </section>

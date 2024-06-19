@@ -1,31 +1,38 @@
-<div class="news-article">
-  <div class="news-article__container">
-    <span class="news-article__title">{{ $title }}</span>
-    <span class="news-article__date">{{ $date }}</span>
-    @foreach($articles as $article)
-      <div class="news-article__paragraph paragraph">
-        <h2 class="paragraph__title">{{ $article->title }}</h2>
-        <div class="paragraph__container">
-          {!! $article->text !!}
-        </div>
-      </div>
-    @endforeach
-  </div>
-  <div class="news-article__latest latest">
-    <h2 class="latest__title"><strong>Derniers</strong> articles</h2>
-    <div class="latest__container">
-      @if($latest->isEmpty())
-        Il y a pas d’articles à afficher.
-      @endif
-      @foreach($latest as $article)
+@extends('layouts.app', [
+  'title' => $title,
+  ])
 
-        <x-article-card
-          :thumbnail="$article->thumbnail"
-          :title="$article->title"
-          :type="$article->type"
-          :date="$article->date"
-          :link="$article->link" />
-      @endforeach
+@section('content')
+  <div class="news-article">
+    <div class="news-article__container">
+      <span class="news-article__title">{{ $title }}</span>
+      <span class="news-article__date">{{ $date }}</span>
+      @if($articles)
+        @foreach($articles as $article)
+          <div class="news-article__paragraph paragraph">
+            <h2 class="paragraph__title">{{ $article->title }}</h2>
+            <div class="paragraph__container">
+              {!! $article->text !!}
+            </div>
+          </div>
+        @endforeach
+      @endif
+    </div>
+    <div class="news-article__latest latest">
+      <h2 class="latest__title"><strong>Derniers</strong> articles</h2>
+      <div class="latest__container">
+        @if($latest->isEmpty())
+          Il y a pas d’articles à afficher.
+        @endif
+        @foreach($latest as $article)
+          <x-article-card
+            :thumbnail="$article->thumbnail"
+            :title="$article->title"
+            :type="$article->type"
+            :date="$article->date"
+            :link="$article->link"/>
+        @endforeach
+      </div>
     </div>
   </div>
-</div>
+@endsection
