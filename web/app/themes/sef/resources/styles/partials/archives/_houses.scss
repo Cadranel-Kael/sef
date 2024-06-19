@@ -5,21 +5,36 @@
 @use '../../base/icons' as *;
 
 .houses {
-  padding-top: 12.1875rem;
+  padding-top: spacing('xl');
   @include max-column(12);
   margin: auto;
+  @include screen-lg {
+    padding-top: 12.1875rem;
+  }
   &__title {
-    @include heading(2);
+    @include heading(3);
+    @include screen-lg {
+      @include heading(2);
+    }
   }
   &__container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    margin: 0 spacing('md');
     align-items: flex-start;
+    @include screen-lg {
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
   &__house {
     @include max-column(6);
     display: flex;
     margin-bottom: spacing('lg');
+    flex-direction: column;
+
+    @include screen-lg {
+      flex-direction: row;
+    }
     .house {
       &__container {
         position: relative;

@@ -4,6 +4,7 @@
 @use '../base/_colors' as *;
 
 .block-mission {
+  padding: spacing('lg') 0  spacing('lg');
 
   &__title {
     @include heading(3);
@@ -33,9 +34,12 @@
       }
 
       &__title {
-        @include heading(3);
+        @include heading(4);
         margin-bottom: 2rem;
         @include max-column(5);
+        @include screen-lg {
+          @include heading(3);
+        }
       }
 
       &__description {
@@ -51,9 +55,18 @@
 
     .block-mission {
       &__title {
+        margin: 0 spacing('md');
         @include heading(3, $color-white);
         @include screen-lg {
+          margin: 0;
           @include heading(2, $color-white);
+        }
+      }
+      &__description {
+        margin: 0 spacing('md');
+        @include max-column(6);
+        @include screen-lg {
+          margin: spacing('sm') auto;
         }
       }
 
@@ -64,11 +77,20 @@
           }
 
           &__title {
-            @include heading(3, $color-white);
+            margin: 0 spacing('md');
+            @include heading(4, $color-white);
+            @include screen-lg {
+              margin: 0;
+              @include heading(3, $color-white);
+            }
           }
 
           &__description {
+            margin: 0 spacing('md');
             @include max-column(5);
+            @include screen-lg {
+              margin: 0;
+            }
           }
         }
       }

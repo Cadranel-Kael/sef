@@ -2,20 +2,27 @@
 @use '../base/_sizes' as *;
 
 .teams {
-  margin: 9.375rem auto 0;
-  display: grid;
+  margin: 9.375rem spacing('md') 0;
   max-width: $max-site-width;
-  grid-template-columns: $column-width 1fr;
   position: relative;
 
+  @include screen-lg {
+    margin: 9.375rem auto 0;
+    display: grid;
+    grid-template-columns: $column-width 1fr;
+
+  }
+
   &__title {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    @include heading(2);
-    position: sticky;
-    align-self: start;
-    top: 0;
-    margin: 0;
+    @include screen-lg {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      @include heading(2);
+      position: sticky;
+      align-self: start;
+      top: 0;
+      margin: 0;
+    }
   }
 
   &__team, .team {
