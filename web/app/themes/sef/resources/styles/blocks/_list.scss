@@ -1,0 +1,31 @@
+@use '../base/typography' as *;
+@use '../base/sizes' as *;
+@use '../base/colors' as *;
+@use '../base/border' as *;
+@use '../base/icons' as *;
+
+.block-list {
+  margin: 0 spacing('sm');
+
+  @include screen-lg {
+    @include max-column(12);
+    margin: 0 auto;
+  }
+
+  &__title {
+    @include heading(3);
+
+    @include screen-lg {
+      @include heading(2);
+    }
+  }
+
+  &__list {
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+
+  &__item {
+    font-weight: bold;
+  }
+}
