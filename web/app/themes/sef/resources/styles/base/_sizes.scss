@@ -6,6 +6,7 @@ $spacing: (
   'xxs': 0.5rem, // 8px
   'xs': 0.75rem, // 12px
   'sm': 1rem, // 16px
+  'sm-md': 0.6666666667rem, //24px
   'md': 2rem, // 32px
   'lg': 4rem, // 64px
   'xl': 8rem, // 128px
@@ -17,6 +18,9 @@ $spacing: (
 $column-width: 5rem;
 $column-gutter: 2rem;
 
+@function column($number) {
+  @return ($column-width+$column-gutter)*$number;
+}
 
 @mixin max-column($number) {
   max-width: (($column-width+$column-gutter)*$number)-$column-gutter;
@@ -24,6 +28,10 @@ $column-gutter: 2rem;
 
 @mixin width-column($number) {
   width: (($column-width+$column-gutter)*$number)-$column-gutter;
+}
+
+@mixin height-column($number) {
+  height: (($column-width+$column-gutter)*$number)-$column-gutter;
 }
 
 @mixin square-column($number) {
