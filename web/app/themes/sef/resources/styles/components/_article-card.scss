@@ -1,0 +1,56 @@
+@use '../base/typography' as *;
+@use '../base/sizes' as *;
+@use '../base/colors' as *;
+@use '../base/border' as *;
+@use '../base/icons' as *;
+
+.article-card {
+  border-radius: $border-radius;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
+  background: $color-white;
+
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__image {
+    width: 100%;
+    height: spacing('xxxl');
+    object-fit: cover;
+  }
+
+  &__title {
+    font-weight: bold;
+    margin: 0 spacing('xs');
+    max-height: spacing('lg');
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  &__type {
+    margin: 0 spacing('xs') spacing('xs');
+  }
+
+  &__date {
+    margin: 0 spacing('xs') spacing('xs');
+    color: $color-grey;
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-indent: -9999%;
+  }
+}
