@@ -5,33 +5,60 @@
 @use '../../base/icons' as *;
 
 .shops {
-  margin: spacing('xxl') spacing('sm') spacing('md') spacing('sm');
+  //padding: spacing('xxl') spacing('sm') spacing('md') spacing('sm');
+  position: relative;
 
   @include screen-lg {
-    @include max-column(12);
-    margin: spacing('xxl') auto spacing('lg') auto;
+
+  }
+
+  &__header {
+    color: $color-white;
+    padding: spacing('xl') spacing('sm') spacing('sm');
+    height: 300%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include screen-lg {
+      padding: spacing('xxxl') 0 spacing('lg');
+      clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 75%);
+    }
   }
 
   &__title {
-    @include heading(3);
+    margin: 0 auto;
+    display: block;
+    @include max-column(12);
+    @include heading(3, $color-white);
     margin-bottom: spacing('sm');
 
     @include screen-lg {
-      @include heading(2);
+      @include heading(2, $color-white);
+    }
+  }
+
+  &__description {
+    margin: 0 auto;
+    @include max-column(12);
+    padding-bottom: spacing('sm');
+
+    @include screen-lg {
+      padding-bottom: spacing('lg');
     }
   }
 
   &__container {
+    @include max-column(12);
+    margin: spacing('sm') spacing('sm') spacing('lg');
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 100%;
-    margin-top: spacing('md');
+    gap: $column-gutter;
 
     @include screen-lg {
+      margin: spacing('md') auto spacing('lg');
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      margin-top: spacing('lg');
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 
@@ -66,9 +93,11 @@
 
       &__image {
         width: 100%;
-        height: auto;
+        height: spacing('xxxxl');
+        object-fit: cover;
         border-radius: $border-radius $border-radius 0 0;
       }
+
       &__link {
         position: absolute;
         top: 0;
