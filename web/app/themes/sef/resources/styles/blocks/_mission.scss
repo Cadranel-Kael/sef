@@ -1,0 +1,77 @@
+@use '../base/_sizes' as *;
+@use '../base/_typography' as *;
+@use '../base/_border' as *;
+@use '../base/_colors' as *;
+
+.block-mission {
+
+  &__title {
+    @include heading(3);
+    margin-bottom: 2rem;
+
+    @include screen-lg {
+      @include heading(2);
+      text-align: center;
+    }
+  }
+
+  &__description {
+    @include max-column(6);
+    margin: auto;
+  }
+
+  &__item {
+    .item {
+      &__step {
+        @include heading(1, $color-grey);
+        overflow: visible;
+      }
+
+      &__content {
+        @include max-column(12);
+        margin: auto;
+      }
+
+      &__title {
+        @include heading(3);
+        margin-bottom: 2rem;
+        @include max-column(5);
+      }
+
+      &__description {
+        @include max-column(5);
+      }
+    }
+  }
+
+  // dark mode
+  &--dark {
+    background: $color-black;
+    color: $color-white;
+
+    .block-mission {
+      &__title {
+        @include heading(3, $color-white);
+        @include screen-lg {
+          @include heading(2, $color-white);
+        }
+      }
+
+      &__item {
+        .item {
+          &__step {
+            @include heading(1, $color-grey);
+          }
+
+          &__title {
+            @include heading(3, $color-white);
+          }
+
+          &__description {
+            @include max-column(5);
+          }
+        }
+      }
+    }
+  }
+}
