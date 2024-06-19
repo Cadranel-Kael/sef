@@ -68,8 +68,12 @@ export default async(app) => {
             defaultDuotone: false,
             defaultGradients: false,
             defaultPalette: false,
-            duotone: [],
             palette: [
+            {
+                name: 'White',
+                slug: 'white',
+                color: '#FFFFFF',
+            },
             {
                 name: 'Primary',
                 slug: 'primary',
@@ -82,20 +86,19 @@ export default async(app) => {
             },
             ],
         },
-        custom: {
-            spacing: {},
-            typography: {
-                'font-size': {},
-                'line-height': {},
-            },
+        lineHeight: {
+            'body': 1.6,
+            'heading': 1.1
         },
         spacing: {
             padding: true,
             units: ['px', '%', 'em', 'rem', 'vw', 'vh'],
+            blockGap: true,
+        },
+        layout: {
         },
         typography: {
-            customFontSize: false,
+            customFontSize: true,
         },
     })
-    .enable();
 };
