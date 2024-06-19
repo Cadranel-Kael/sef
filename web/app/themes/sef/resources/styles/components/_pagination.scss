@@ -1,0 +1,31 @@
+@use '../base/typography' as *;
+@use '../base/sizes' as *;
+@use '../base/colors' as *;
+@use '../base/border' as *;
+@use '../base/icons' as *;
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  gap: spacing('xs');
+  &__item {
+    border-radius: $border-radius-max;
+    background: $color-grey--lightest;
+    width: spacing('lg');
+    min-height: spacing('lg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: $color-black;
+    &:hover {
+      background: $color-primary;
+    }
+  }
+  &__current {
+    background: $color-primary;
+  }
+}

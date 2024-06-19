@@ -104,37 +104,118 @@ function remove_posts_menu(): void
 
 add_action('admin_menu', 'remove_posts_menu');
 
-add_theme_support('editor-styles');
-add_editor_style(asset('editor.css')->relativePath(get_theme_file_path()));
-
-function human_time_diff_fr($from, $to = ''): array|string
+function kc_pagination($pages = '', $range = 2)
 {
-    if (empty($to)) {
-        $to = current_time('timestamp');
+    $showitems = ($range * 2) + 1;
+
+    global $paged;
+    if (empty($paged)) {
+        $paged = 1;
     }
 
-    $diff = human_time_diff($from, $to);
-
-    $translation = [
-        'seconds' => 'secondes',
-        'second' => 'seconde',
-        'minutes' => 'minutes',
-        'minute' => 'minute',
-        'hours' => 'heures',
-        'hour' => 'heure',
-        'days' => 'jours',
-        'day' => 'jour',
-        'weeks' => 'semaines',
-        'week' => 'semaine',
-        'months' => 'mois',
-        'month' => 'mois',
-        'years' => 'ans',
-        'year' => 'an',
-    ];
-
-    foreach ($translation as $en => $fr) {
-        $diff = str_replace($en, $fr, $diff);
+    if ($pages == '') {
+        global $wp_query;
+        $pages = $wp_query->max_num_pages;
+        if (!$pages) {
+            $pages = 1;
+        }
     }
 
-    return $diff;
+    if (1 != $pages) {
+        echo "<div class='pagination'>";
+        if ($paged > 2 && $paged > $range + 1 && $showitems < $pages) {
+            echo "<a class='pagination__item' href='" . get_pagenum_link(1) . "'>&laquo;</a>";
+        }
+        if ($paged > 1 && $showitems < $pages) {
+            echo "<a class='pagination__item' href='" . get_pagenum_link($paged - 1) . "'>&lsaquo;</a>";
+        }
+
+        for ($i = 1; $i <= $pages; $i++) {
+            if (1 != $pages && (!($i >= $paged + $range + 1 || $i <= $paged - $range - 1) || $pages <= $showitems)) {
+                echo ($paged == $i) ?
+                    "<span class='pagination__item pagination__current'>" .
+                    $i .
+                    "</span>" :
+                    "<a href='" .
+                    get_pagenum_link($i) .
+                    "' class='pagination__item pagination__inactive' >" .
+                    $i .
+                    "</a>";
+            }
+        }
+
+        if ($paged < $pages && $showitems < $pages) {
+            echo "<a class='pagination__item' href='" . get_pagenum_link($paged + 1) . "'>&rsaquo;</a>";
+        }
+        if ($paged < $pages - 1 && $paged + $range - 1 < $pages && $showitems < $pages) {
+            echo "<a class='pagination__item' href='" . get_pagenum_link($pages) . "'>&raquo;</a>";
+        }
+        echo "</div>\n";
+    }
 }
+
+add_filter('hf_hide_admin_menu', '__return_false');
+
+/**
+ * Validate HTML Forms.
+ *
+ * @param string $error
+ * @param \HTML_Forms\Form $form
+ * @param array $data
+ * @return string
+ */
+add_filter('hf_validate_form', function ($error, $form, $data) {
+    if ($form->slug !== 'request-home') {
+        return $error;
+    }
+
+    if (empty($data['first_name']) || empty($data['last_name'])) {
+        return 'required_field_missing';
+    }
+
+    if (empty($data['email'] || !is_email($data['email']))) {
+        return 'invalid_email';
+    }
+
+    if (empty($data['terms'])) {
+        return 'invalid_terms';
+    }
+
+    $recaptcha = new \ReCaptcha\ReCaptcha(
+        env('RECAPTCHA_PRIVATE_KEY')
+    );
+
+    $response = $recaptcha->setExpectedHostname(
+        wp_parse_url(home_url(), PHP_URL_HOST)
+    )->verify(
+        $data['g-recaptcha-response'] ?? '',
+        $_SERVER['REMOTE_ADDR']
+    );
+
+    if (!$response->isSuccess()) {
+        return 'invalid_captcha';
+    }
+
+    return $error;
+}, 10, 3);
+
+/**
+ * Customize the HTML Forms invalid captcha error.
+ *
+ * @return string
+ */
+add_filter('hf_form_message_invalid_captcha', function () {
+    return __('Invalid recaptcha response.', 'html-forms');
+});
+
+/**
+ * Customize the HTML Forms invalid terms error.
+ *
+ * @return string
+ */
+add_filter('hf_form_message_invalid_terms', function () {
+    return __('You must agree to the terms of service.', 'html-forms');
+});
+
+
+add_filter( 'gform_disable_css', '__return_true' );
