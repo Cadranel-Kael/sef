@@ -69,7 +69,7 @@ class Teams extends Block
      *
      * @var string
      */
-    public $mode = 'edit';
+    public $mode = 'preview';
 
     /**
      * The default block alignment.
@@ -103,7 +103,7 @@ class Teams extends Block
         'align_content' => false,
         'full_height' => false,
         'anchor' => false,
-        'mode' => false,
+        'mode' => true,
         'multiple' => true,
         'jsx' => true,
     ];
@@ -191,13 +191,6 @@ class Teams extends Block
      */
     public function getTeams()
     {
-//        $args = array(
-//            'posts_per_page'   => -1,
-//            'post_type'        => 'teams',
-//            'order' => 'ASC',
-//            'post_status' => 'publish',
-//        );
-//        return new WP_Query($args);
         $args = array(
             'posts_per_page'   => -1,
             'post_type'        => 'teams',

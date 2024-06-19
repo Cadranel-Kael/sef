@@ -6,8 +6,6 @@ use Roots\Acorn\View\Composer;
 
 class SingleShops extends Composer
 {
-    protected $acf = true;
-
     protected static $views = [
         'partials.singles.single-shops',
     ];
@@ -15,7 +13,7 @@ class SingleShops extends Composer
     public function with()
     {
         return [
-            'title' => get_the_title(),
+            'shopTitle' => get_the_title(),
             'type' => get_field('type'),
             'image' => get_field('image'),
             'location' => get_field('location'),
@@ -23,6 +21,7 @@ class SingleShops extends Composer
             'shopPhone' => get_field('phone') ? get_field('phone') : null,
             'shopWebsite' => get_field('website') ? get_field('website') : null,
             'shopEmail' => get_field('website') ? get_field('website') : null,
+            'background' => get_field('shop-image', 'option'),
         ];
     }
 
@@ -51,4 +50,8 @@ class SingleShops extends Composer
         });
     }
 
+    public function title()
+    {
+        return get_the_title();
+    }
 }

@@ -1,5 +1,2 @@
-@extends('layouts.app', ['title' => get_the_title()])
+@include('partials.singles.single-' . get_post_type())
 
-@section('content')
-  @include('partials.singles.single-' . get_post_type())
-@endsection
