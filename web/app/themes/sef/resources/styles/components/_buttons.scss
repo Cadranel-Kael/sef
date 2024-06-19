@@ -2,6 +2,7 @@
 @use '../base/_border' as *;
 
 .button {
+  border: none;
   display: inline-block;
   padding: 0.75em 1em;
   border-radius: $border-radius;
@@ -9,6 +10,7 @@
   text-decoration: none;
   transition: all 0.3s;
   font-weight: bold;
+  cursor: pointer;
 
   &--primary {
     background-color: $color-primary;
@@ -29,4 +31,9 @@
       color: $color-white;
     }
   }
+}
+
+@mixin button($modifier) {
+  @extend .button;
+  @extend .button--#{$modifier};
 }
