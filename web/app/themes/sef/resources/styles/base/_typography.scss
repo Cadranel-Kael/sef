@@ -14,6 +14,7 @@ $heading-line-height: 1.1;
 
   font-family: 'Permanent Marker', serif;
   line-height: $heading-line-height;
+  overflow: hidden;
   strong {
     position: relative;
     display: inline-block;
@@ -49,9 +50,9 @@ $text-sizes: (
 );
 $text-line-height: 1.6;
 
-@mixin text($size) {
+@mixin text($size, $weight: normal) {
   font-size: map-get($text-sizes, $size);
   font-family: 'Open Sans', sans-serif;
   line-height: $text-line-height;
-  font-weight: normal;
+  font-weight: $weight;
 }
