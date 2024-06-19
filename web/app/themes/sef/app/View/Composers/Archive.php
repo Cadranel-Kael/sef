@@ -19,12 +19,6 @@ class Archive extends Composer
     public function with()
     {
         return [
-            'title' => $this->title(),
         ];
-    }
-
-    public function title()
-    {
-        return get_queried_object()->label;
     }
 }
