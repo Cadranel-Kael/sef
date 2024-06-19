@@ -1,15 +1,22 @@
-<div class="paragraphs">
-  @while( have_rows('blocks') )
-    @php(the_row())
+<div class="paragraphs {{$background_decoration ? 'paragraphs--decoration' : ''}}">
+  @if($blocks->isEmpty())
     <article class="paragraphs__block">
-    @if(get_sub_field('image_field'))
-      {!! wp_get_attachment_image(get_sub_field('image'), 'medium', false, ['class' => 'paragraphs__image']) !!}
-    @endif
       <div class="paragraphs__text">
-        <h2 class="paragraphs__title">{!! get_sub_field('heading') !!}</h2>
-        <p class="paragraphs__paragraph">{!! get_sub_field('text', false, false) !!}</p>
+        <h2 class="paragraphs__title">{!! $blocks->title !!}</h2>
+        <p class="paragraphs__paragraph">{!! $example['text'] !!}</p>
       </div>
     </article>
-  @endwhile
+  @endif
+  @foreach($blocks as $block)
+    <article class="paragraphs__block">
+      @if($block->image_field)
+        {!! wp_get_attachment_image($block->image, 'medium', false, ['class' => 'paragraphs__image paragraphs__image--' . $block->lenght]) !!}
+      @endif
+      <div class="paragraphs__text">
+        <h2 class="paragraphs__title">{!! $block->heading !!}</h2>
+        <p class="paragraphs__paragraph">{!! $block->text !!}</p>
+      </div>
+    </article>
+  @endforeach
 </div>
 

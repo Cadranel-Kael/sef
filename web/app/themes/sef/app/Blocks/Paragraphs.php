@@ -119,17 +119,17 @@ class Paragraphs extends Block
      *
      * @var array
      */
-    public $example = [];
+    public $example = [
+        'heading' => 'Votre titre',
+        'text' => 'Votre texte',
+    ];
 
     /**
      * The block template.
      *
      * @var array
      */
-    public $template = [
-        'core/heading' => ['placeholder' => 'Hello World'],
-        'core/paragraph' => ['placeholder' => 'Welcome to the Paragraphs block.'],
-    ];
+    public $template = [];
 
     /**
      * Data to be passed to the block before rendering.
@@ -137,7 +137,9 @@ class Paragraphs extends Block
     public function with(): array
     {
         return [
-//            'blocks' => $this->blocks(),
+            'blocks' => $this->blocks(),
+            'example' => $this->example,
+            'background_decoration' => get_field('background_decoration') ?: '0',
         ];
     }
 
@@ -149,7 +151,13 @@ class Paragraphs extends Block
         $paragraphs = Builder::make('paragraphs');
 
         $paragraphs
-            ->addRepeater('blocks')
+            ->addTrueFalse('background_decoration', [
+                'message' => 'Activer la décoration de fond',
+                'default_value' => 0,
+            ])
+            ->addRepeater('blocks', [
+                'layout' => 'block',
+            ])
             ->addTrueFalse('image_field', [
                 'message' => 'Activer l\'image',
                 'default_value' => 0,
@@ -166,6 +174,15 @@ class Paragraphs extends Block
                     ],
                 ],
                 'return_format' => 'id',
+            ])
+            ->addRadio('length', [
+                'label' => 'Longueur de l’image',
+                'choices' => [
+                    'short' => 'Court',
+                    'half' => 'Moitié de la section',
+                    'full' => 'Toute la largeur',
+                ],
+                'default_value' => 'short',
             ])
             ->addWysiwyg('heading', [
                 'toolbar' => 'basic',
@@ -187,11 +204,31 @@ class Paragraphs extends Block
     /**
      * Retrieve the items.
      *
-     * @return array
      */
     public function blocks()
     {
-//        return have_rows('blocks');
+        $blocks = collect();
+
+        if (have_rows('blocks')) {
+            while (have_rows('blocks')) {
+                the_row();
+                $blockObj = new \stdClass();
+                $blockObj->image_field = get_sub_field('image_field') ?: false;
+                $blockObj->image = get_sub_field('image') ?: false;
+                $blockObj->lenght = get_sub_field('length') ?: 'short';
+                $blockObj->heading = get_sub_field('heading') ?: $this->example['heading'];
+                $blockObj->text = get_sub_field('text', false) ?: $this->example['text'];
+                $blocks->push($blockObj);
+            }
+        } else {
+            $blockObj = new \stdClass();
+            $blockObj->image_field = false;
+            $blockObj->heading = $this->example['heading'];
+            $blockObj->text = $this->example['text'];
+            $blocks->push($blockObj);
+        }
+
+        return $blocks;
     }
 
     /**
