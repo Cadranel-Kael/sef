@@ -16,6 +16,7 @@ class ArchiveShops extends Composer
     {
         return [
             'shops' => $this->shops(),
+            'background' => get_field('shop-image', 'option'),
         ];
     }
 

@@ -19,6 +19,7 @@ class ArchiveHouses extends Composer
     public function with()
     {
         return [
+            'title' => 'Nos Heber', // 'Houses
             'houses' => $this->houses(),
         ];
     }
