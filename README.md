@@ -46,33 +46,38 @@ This project involves the rebranding and recreation of the website for SEF, a be
 - PHP >= 8.0
 - Composer
 - [yarn](https://yarnpkg.com/)
+
+**Plugins**
 - [ACF pro](https://www.advancedcustomfields.com/pro/)
 
-1. **Create a Bedrock Project**
-   [Bedrock Documentation](https://roots.io/bedrock/docs/installation/)
-   ```bash
-   composer create-project roots/bedrock
-   ```
-3. **Set Up Environment Variables**:
-   Create a `.env` file in the root directory and add the necessary environment variables (see .env.example as an example)
-4. **Clone the Repository**:
+**Optional Plugins**
+- [SVG Support](https://wordpress.org/plugins/svg-support/)
+- [WordPress SEO by Yoast](https://wordpress.org/plugins/wordpress-seo/)
+
+1. **Clone the Repository**:
    ```bash
    git clone https://github.com/Cadranel-Kael/sef.git
    ```
-5. **Install Dependencies**:
+2. **Install Dependencies**:
    ```bash
    composer install
    ```
-6. **Navigate to the SEF Directory**:
+3. **Create a New Database**:
+   Create a new database in your local environment and update the `.env` file with the database details (see .env.example as an example).
+   ```bash
+   DB_NAME=sef
+   DB_USER=root
+   DB_PASSWORD=
+   ```
+4. **Navigate to the SEF Directory**:
    ```bash
    cd web/app/themes/sef
    ```
-7. **Install Dependencies**:
+6. **Install Dependencies**:
    ```bash
-   composer install
    yarn
    ```
-8. **Configure Bud.js with your local dev URL**
+7. **Configure Bud.js with your local dev URL**
    ```javascript
    app
     .setUrl(3000)
@@ -80,11 +85,11 @@ This project involves the rebranding and recreation of the website for SEF, a be
     .setProxyUrl(8080)
     .setPublicProxyUrl(`http://example.test`)
    ```
-9. **Build the application**:
+8. **Build the application**:
    ```bash
    yarn build
    ```
-8. **Run the Development Server**:
+9. **Run the Development Server**:
    ```bash
    yarn dev
    ```
@@ -126,6 +131,7 @@ For any questions or suggestions, please contact:
 
 - **Project Lead**: Kael Cadranel
 - **Email**: kael.cadranel00@gmail.com
+- **Website**: [kael.digital](https://www.kael.digital/)
 
 ---
 
