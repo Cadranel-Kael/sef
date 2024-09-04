@@ -1,0 +1,61 @@
+@use '../base/colors' as *;
+@use '../base/sizes' as *;
+@use '../base/typography' as *;
+@use '../components/buttons' as *;
+
+.stats {
+  margin-top: spacing('xl');
+  width: 100vw;
+  background: $color-primary;
+
+  &__container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: spacing('md');
+    gap: spacing('sm');
+    box-sizing: border-box;
+    @include max-column(12);
+
+    @include screen-lg {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__number {
+    @include text('xl', bold);
+  }
+
+  &__label {
+    @include text('medium', bold);
+  }
+
+  &__block:first-child {
+    border-top: none;
+    border-left: none;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: spacing('sm');
+    border-top: $color-black 1px solid;
+
+    @include screen-lg {
+      border-top: none;
+      border-left: $color-black 1px solid;
+    }
+  }
+
+  &__block:last-child {
+    justify-content: center;
+  }
+
+  &__button {
+    @include button(outline);
+  }
+}
