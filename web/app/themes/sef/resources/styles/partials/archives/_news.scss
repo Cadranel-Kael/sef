@@ -8,14 +8,15 @@
   margin: spacing('xl') spacing('sm');
 
   @include screen-lg {
-    @include max-column(12);
     margin: spacing('xxxl') auto;
+    @include max-column(12);
   }
 
   &__title {
     @include heading(3);
 
     @include screen-lg {
+      margin-bottom: spacing('lg');
       @include heading(2);
       margin-bottom: spacing('lg');
     }

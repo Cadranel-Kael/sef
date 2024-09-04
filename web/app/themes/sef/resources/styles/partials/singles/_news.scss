@@ -8,11 +8,11 @@
   margin: spacing('xl') spacing('sm');
 
   @include screen-lg {
-    @include max-column(12);
     margin: spacing('xxxl') auto;
     display: grid;
     grid-template-columns: 1fr column(3);
     gap: spacing('lg');
+    @include max-column(12);
   }
 
   &__title {
@@ -20,8 +20,8 @@
     @include heading(3);
 
     @include screen-lg {
-      @include heading(2);
       margin-bottom: spacing('xxs');
+      @include heading(2);
     }
   }
 
@@ -48,12 +48,12 @@
   &__latest {
     .latest {
       &__title {
-        @include heading(4);
         margin-bottom: spacing('md');
+        @include heading(4);
 
         @include screen-lg {
-          @include heading(3);
           margin-bottom: spacing('lg');
+          @include heading(3);
         }
       }
     }

@@ -6,8 +6,8 @@
 @use '../utils/_sr' as *;
 
 .gform_wrapper {
-  @include max-column(12);
   margin: auto;
+  @include max-column(12);
 }
 
 .gform_wrapper li {
@@ -42,10 +42,10 @@
 .ginput_container input,
 .ginput_container select,
 .ginput_container textarea {
-  @include text(normal);
   border: $border-width solid $color-black;
   border-radius: $border-radius;
   padding: spacing(sm-md) spacing(sm);
+  @include text(normal);
 }
 
 .ginput_full {
@@ -64,9 +64,10 @@
   input,
   select,
   textarea {
-    @include text(small);
     border: $border-width solid $color-grey;
     border-radius: $border-radius;
+    @include text(small);
+
     ::placeholder {
       color: $color-grey;
     }

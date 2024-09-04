@@ -18,29 +18,29 @@ $spacing: (
 $column-width: 5rem;
 $column-gutter: 2rem;
 
-@function column($number) {
-  @return ($column-width+$column-gutter)*$number;
-}
-
 @mixin max-column($number) {
-  max-width: (($column-width+$column-gutter)*$number)-$column-gutter;
+  & {
+    max-width: (($column-width+$column-gutter)*$number)-$column-gutter;
+  }
 }
 
 @mixin width-column($number) {
-  width: (($column-width+$column-gutter)*$number)-$column-gutter;
+  & {
+    width: (($column-width+$column-gutter)*$number)-$column-gutter;
+  }
 }
 
 @mixin height-column($number) {
-  height: (($column-width+$column-gutter)*$number)-$column-gutter;
+  & {
+    height: (($column-width+$column-gutter)*$number)-$column-gutter;
+  }
 }
 
 @mixin square-column($number) {
-  width: (($column-width+$column-gutter)*$number)-$column-gutter;
-  height: (($column-width+$column-gutter)*$number)-$column-gutter;
-}
-
-@function spacing($size) {
-  @return map-get($spacing, $size);
+  & {
+    width: (($column-width+$column-gutter)*$number)-$column-gutter;
+    height: (($column-width+$column-gutter)*$number)-$column-gutter;
+  }
 }
 
 @mixin screen-lg {
@@ -59,4 +59,12 @@ $column-gutter: 2rem;
   @media (max-width: 430px) {
     @content
   }
+}
+
+@function column($number) {
+  @return ($column-width+$column-gutter)*$number;
+}
+
+@function spacing($size) {
+  @return map-get($spacing, $size);
 }

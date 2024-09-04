@@ -143,7 +143,10 @@
 
     &__button {
       align-self: center;
-      margin-right: 2.5rem;
+
+      @include screen-lg {
+        margin-right: 2.5rem;
+      }
     }
   }
 }

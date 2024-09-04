@@ -1,4 +1,5 @@
 @use '../base/_colors' as *;
+@use 'sass:math';
 
 // Heading
 $heading-base-size: 5.625rem;
@@ -6,40 +7,55 @@ $heading-ratio: 1.40625;
 $heading-line-height: 1.1;
 
 @mixin heading($level, $color: $color-black) {
-  @if($level == 1) {
-    font-size: $heading-base-size;
-  } @else {
-    font-size: $heading-base-size / pow($heading-ratio, $level - 1);
-  }
-
   font-family: 'Permanent Marker', serif;
   line-height: $heading-line-height;
   overflow: hidden;
+  color: $color;
+
+  @if ($level == 1) {
+    font-size: $heading-base-size;
+  } @else {
+    font-size: math.div($heading-base-size, math.pow($heading-ratio, $level - 1));
+  }
+
   strong {
     position: relative;
     display: inline-block;
-    @if($color == $color-white) {
+
+    @if ($color == $color-white) {
       color: $color-primary;
     }
-  }
 
-  @if($color) {
-    color: $color;
-  }
-
-  @if($color != $color-white) {
-    strong:before {
-      content: '';
-      background-image: url("~@images/visual-highlight.svg");
-      background-repeat: no-repeat;
-      background-size: 110% 100%;
-      width: 110%;
-      height: 100%;
-      position: absolute;
-      z-index: -1;
+    @if ($color != $color-white) {
+      &::before {
+        content: '';
+        background-image: url("~@images/visual-highlight.svg");
+        background-repeat: no-repeat;
+        background-size: 110% 100%;
+        width: 110%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+      }
     }
   }
+
+  &.on-appear--visible>*>strong::before {
+    animation: draw 1s 1s ease;
+  }
+  &.on-appear--hidden>*>strong::before {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  &.on-appear--visible>strong::before {
+    animation: draw 1s 1s ease;
+  }
+  &.on-appear--hidden>strong::before {
+    opacity: 0;
+    transform: scaleX(0);
+  }
 }
+
 
 // Text
 $text-sizes: (
@@ -47,6 +63,7 @@ $text-sizes: (
   'normal': 1rem,
   'medium': 1.125rem,
   'large': 1.25rem,
+  'xl': 4rem,
 );
 $text-line-height: 1.6;
 

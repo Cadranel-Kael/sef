@@ -2,12 +2,12 @@
 @use '../base/_sizes' as *;
 
 .teams {
-  margin: 9.375rem spacing('md') 0;
+  margin: 9.375rem spacing('md') spacing('xl');
   max-width: $max-site-width;
   position: relative;
 
   @include screen-lg {
-    margin: 9.375rem auto 0;
+    margin: 9.375rem auto spacing('lg');
     display: grid;
     grid-template-columns: $column-width 1fr;
 
@@ -17,11 +17,11 @@
     @include screen-lg {
       writing-mode: vertical-rl;
       transform: rotate(180deg);
-      @include heading(2);
       position: sticky;
       align-self: start;
       top: 0;
       margin: 0;
+      @include heading(2);
     }
   }
 
@@ -30,8 +30,8 @@
     margin-bottom: 5rem;
 
     &__title {
-      @include heading(3);
       margin-bottom: 1rem;
+      @include heading(3);
     }
 
     &__members {
@@ -50,8 +50,8 @@
       margin-bottom: 2rem;
 
       &__name {
-        @include heading(4);
         margin-bottom: 1.25rem;
+        @include heading(4);
       }
     }
   }

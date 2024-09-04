@@ -10,14 +10,25 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  @include max-column(12);
+
+  @include screen-lg {
+    margin: spacing('xxl') auto;
+  }
 
   &__title {
     @include heading(3);
     margin: 0 spacing('md') spacing('lg');
+    @include heading(3);
 
     @include screen-lg {
       @include heading(2);
       align-self: center;
+      @include heading(2);
+    }
+
+    &.on-appear--visible {
+      animation: fadeIn--bottom 1s ease-in-out;
     }
   }
 

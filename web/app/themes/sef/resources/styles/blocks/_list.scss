@@ -8,8 +8,8 @@
   margin: 0 spacing('sm');
 
   @include screen-lg {
-    @include max-column(12);
     margin: 0 auto;
+    @include max-column(12);
   }
 
   &__title {

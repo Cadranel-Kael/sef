@@ -7,35 +7,39 @@
   padding: spacing('lg') 0  spacing('lg');
 
   &__title {
-    @include heading(3);
     margin-bottom: 2rem;
+    @include heading(3);
 
     @include screen-lg {
+      text-align: center;
       @include heading(2);
       text-align: center;
     }
   }
 
   &__description {
-    @include max-column(6);
     margin: auto;
+    @include max-column(6);
+    &.on-appear--visible {
+      animation: fadeIn--bottom 1s ease-in-out;
+    }
   }
 
   &__item {
     .item {
       &__step {
-        @include heading(1, $color-grey);
         overflow: visible;
+        @include heading(1, $color-grey);
       }
 
       &__content {
-        @include max-column(12);
         margin: auto;
+        @include max-column(12);
       }
 
       &__title {
-        @include heading(4);
         margin-bottom: 2rem;
+        @include heading(4);
         @include max-column(5);
         @include screen-lg {
           @include heading(3);

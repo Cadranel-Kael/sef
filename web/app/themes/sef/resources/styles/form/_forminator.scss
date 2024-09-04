@@ -6,8 +6,8 @@
 @use '../utils/_sr' as *;
 
 .forminator-ui {
-  @include max-column(12);
   margin: auto;
+  @include max-column(12);
 }
 
 .forminator-field {
@@ -26,8 +26,8 @@
 .forminator-input {
   border: $border-width solid $color-black;
   border-radius: $border-radius;
-  @include text(small);
   padding: spacing('xxs') spacing('xs');
+  @include text(small);
   @include max-column(4);
 }
 
@@ -41,9 +41,9 @@
 }
 
 .forminator-button {
-  @include text(normal);
-  @include button(primary);
   font-weight: bold;
   margin-top: spacing('sm');
   width: fit-content;
+  @include text(normal);
+  @include button(primary);
 }
