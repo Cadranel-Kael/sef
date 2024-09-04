@@ -33,8 +33,15 @@ class ArchiveShops extends Composer
             $shopObject->image = get_field('image', $shop);
             $shopObject->type = get_field('type', $shop);
             $shopObject->location = get_field('location', $shop);
+            $shopObject->locationForMaps = $this->locationToMaps(get_field('location', $shop));
             $shopObject->link = get_permalink($shop);
             return $shopObject;
         });
+    }
+
+    public function locationToMaps($location)
+    {
+        $location = str_replace(' ', '+', $location);
+        return $location;
     }
 }
