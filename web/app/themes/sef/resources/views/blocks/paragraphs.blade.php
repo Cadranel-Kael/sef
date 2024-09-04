@@ -8,12 +8,12 @@
     </article>
   @endif
   @foreach($blocks as $block)
-    <article class="paragraphs__block">
+    <article class="paragraphs__block on-appear">
       @if($block->image_field)
         {!! wp_get_attachment_image($block->image, 'medium', false, ['class' => 'paragraphs__image paragraphs__image--' . $block->lenght]) !!}
       @endif
       <div class="paragraphs__text">
-        <h2 class="paragraphs__title">{!! $block->heading !!}</h2>
+        <h2 class="paragraphs__title on-appear">{!! $block->heading !!}</h2>
         <p class="paragraphs__paragraph">{!! $block->text !!}</p>
       </div>
     </article>

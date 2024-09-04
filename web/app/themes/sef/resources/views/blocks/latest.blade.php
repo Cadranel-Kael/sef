@@ -1,6 +1,6 @@
 <div class="block-latest">
-  <div class="block-latest__title"><strong>Dernières</strong> Actualités</div>
-  <div class="block-latest__container">
+  <div class="block-latest__title on-appear"><strong>Dernières</strong> Actualités</div>
+  <div class="block-latest__container on-appear">
     @if($posts->isEmpty())
       Il y a pas d’articles à afficher.
     @endif

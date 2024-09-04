@@ -8,8 +8,4 @@
   @else
     <p>{{ $block->preview ? 'Add an item...' : 'No items found!' }}</p>
   @endif
-
-  <div>
-    <InnerBlocks template="{{ $block->template }}" />
-  </div>
 </div>

@@ -1,3 +1,4 @@
+@dd($title, $date, $articles, $latest);
 @extends('layouts.app', [
   'title' => $title,
   ])
@@ -12,7 +13,11 @@
           <div class="news-article__paragraph paragraph">
             <h2 class="paragraph__title">{{ $article->title }}</h2>
             <div class="paragraph__container">
-              {!! $article->text !!}
+              @if($article->text)
+                {!! $article->text !!}
+              @else
+                Il n’y a pas de contenu à afficher.
+              @endif
             </div>
           </div>
         @endforeach
