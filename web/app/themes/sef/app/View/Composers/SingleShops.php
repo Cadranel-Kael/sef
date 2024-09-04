@@ -17,6 +17,7 @@ class SingleShops extends Composer
             'type' => get_field('type'),
             'image' => get_field('image'),
             'location' => get_field('location'),
+            'locationForMaps' => $this->locationForMaps(),
             'days' => $this->days(),
             'shopPhone' => get_field('phone') ? get_field('phone') : null,
             'shopWebsite' => get_field('website') ? get_field('website') : null,
@@ -53,5 +54,12 @@ class SingleShops extends Composer
     public function title()
     {
         return get_the_title();
+    }
+
+    public function locationForMaps()
+    {
+        $location = get_field('location');
+        $location = str_replace(' ', '+', $location);
+        return $location;
     }
 }
