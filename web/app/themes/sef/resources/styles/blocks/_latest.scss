@@ -5,8 +5,7 @@
 @use '../base/icons' as *;
 
 .block-latest {
-  @include max-column(12);
-  margin: auto;
+  margin: spacing('lg') auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -17,12 +16,10 @@
   }
 
   &__title {
-    @include heading(3);
     margin: 0 spacing('md') spacing('lg');
     @include heading(3);
 
     @include screen-lg {
-      @include heading(2);
       align-self: center;
       @include heading(2);
     }
@@ -38,15 +35,23 @@
     margin: 0 spacing('md');
     gap: spacing('md');
 
+    &.on-appear--visible {
+      animation: fadeIn--bottom 1s ease-in-out;
+    }
+
     @include screen-lg {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: $column-gutter;
       margin-bottom: spacing('lg');
+      &.on-appear--visible {
+        animation: fadeIn--left 1s ease-in-out;
+      }
     }
   }
 
   &__link {
+    margin-top: spacing('md');
     align-self: center;
   }
 }
