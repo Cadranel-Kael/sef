@@ -3,11 +3,11 @@
 @forward 'utils/_sr';
 @forward 'base/_reset';
 @forward 'base/_general';
+@forward 'base/_loading-screen';
 @forward 'partials/_nav';
 @forward 'sections/_header';
 @forward 'sections/_footer';
 @forward 'components/_buttons';
-@forward 'components/_search';
 @forward 'components/_pagination';
 @forward 'components/_burger-button';
 @forward 'components/_fixed-cta';
@@ -17,7 +17,8 @@
 @forward 'blocks/_paragraphs';
 @forward 'blocks/_teams';
 @forward 'blocks/_latest';
-@forward 'blocks/_feature';
+@forward 'blocks/_stats';
+@forward 'blocks/_donation-types';
 @forward 'blocks/_list';
 @forward 'blocks/_mission';
 @forward 'form/_gforms';
