@@ -1,6 +1,7 @@
 @use '../base/_typography' as *;
 @use '../base/_sizes' as *;
 @use '../base/_colors' as *;
+@use '../base/_animations' as *;
 
 .hero {
   position: relative;
@@ -9,10 +10,9 @@
   width: 100vw;
   overflow: hidden;
   max-width: 100%;
-  background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
-  background: $color-black;
+  background: $color-black no-repeat cover;
 
   &--left {
     .hero__container {
@@ -26,8 +26,8 @@
   }
 
   &__container {
-    margin: 0 spacing('sm');
-    top: spacing('xxl');
+    margin: spacing('xxl') spacing('sm') 0;
+    color: $color-white;
 
     > * {
       max-width: 40rem;
@@ -40,6 +40,14 @@
       margin: 0 auto;
       top: spacing('xxxl');
       width: $max-site-width;
+    }
+
+    &.on-appear--hidden {
+      opacity: 0;
+    }
+
+    &.on-appear--visible {
+      animation: fadeIn--bottom 1s ease-in-out;
     }
   }
 
@@ -72,30 +80,19 @@
     }
   }
 
-    &:before {
-      animation: ease-in-out 1s scale;
-      content: '';
-      background-image: url("~@images/visual-strokes.svg");
-      background-repeat: no-repeat;
-      background-size: 120% 120%;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      z-index: -1;
-    }
+  &__stroke {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 120%;
+    z-index: -1;
+    fill: $color-primary;
   }
 
   &__image {
     width: 100%;
     height: auto;
-  }
-}
-
-@keyframes scale {
-  0% {
-    background-size: 0 120%;
-  }
-  100% {
-    background-size: 120% 120%;
+    display: flex;
   }
 }

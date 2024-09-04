@@ -3,6 +3,7 @@
 @use '../../base/colors' as *;
 @use '../../base/border' as *;
 @use '../../base/icons' as *;
+@use '../../base/animations' as *;
 
 .houses {
   padding-top: spacing('xl');
@@ -13,8 +14,13 @@
   }
   &__title {
     @include heading(3);
+
     @include screen-lg {
       @include heading(2);
+    }
+
+    &.on-appear--visible {
+      animation: fadeIn--bottom 1s ease-in-out;
     }
   }
   &__container {
@@ -35,6 +41,11 @@
     @include screen-lg {
       flex-direction: row;
     }
+
+    &.on-appear--visible {
+      animation: fadeIn--left 1s ease-in-out;
+    }
+
     .house {
       &__container {
         position: relative;

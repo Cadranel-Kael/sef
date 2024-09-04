@@ -2,6 +2,7 @@
 @use '../base/_typography' as *;
 @use '../base/_border' as *;
 @use '../base/_colors' as *;
+@use '../base/_animations' as *;
 
 .block-mission {
   padding: spacing('lg') 0  spacing('lg');
@@ -13,7 +14,10 @@
     @include screen-lg {
       text-align: center;
       @include heading(2);
-      text-align: center;
+    }
+
+    &.on-appear--visible {
+      animation: fadeIn--bottom 1s ease-in-out;
     }
   }
 
@@ -26,6 +30,10 @@
   }
 
   &__item {
+    &.on-appear--visible {
+      animation: fadeIn--left 1s ease-in-out;
+    }
+
     .item {
       &__step {
         overflow: visible;

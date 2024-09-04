@@ -18,7 +18,10 @@
     @include screen-lg {
       margin-bottom: spacing('lg');
       @include heading(2);
-      margin-bottom: spacing('lg');
+    }
+
+    &.on-appear--visible {
+      animation: fadeIn--bottom 1s ease-in-out;
     }
   }
 

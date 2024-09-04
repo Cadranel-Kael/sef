@@ -1,6 +1,7 @@
 @use '../base/_sizes' as *;
 @use '../base/_typography' as *;
 @use '../base/_border' as *;
+@use '../base/_animations' as *;
 
 .paragraphs {
   max-width: $max-site-width;
@@ -39,6 +40,10 @@
       margin: 0 0 0.75rem;
     }
 
+    &.on-appear--visible {
+      animation: 1s ease-in-out fadeIn--left;
+    }
+
     &:nth-child(2n) {
       @include screen-lg {
         margin-left: auto;
@@ -69,12 +74,15 @@
   }
 
   &__title {
-    @include heading(3);
     margin-bottom: 2rem;
     @include heading(3);
 
     @include screen-lg {
       @include heading(2);
+    }
+
+    &.on-appear--visible {
+      animation: 2s ease-in-out fadeIn--bottom;
     }
   }
 

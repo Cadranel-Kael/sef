@@ -32,6 +32,10 @@
     @include screen-lg {
       @include heading(2, $color-white);
     }
+
+    &.on-appear--visible {
+      animation: fadeIn--bottom 1s ease-in-out;
+    }
   }
 
   &__description {
@@ -42,10 +46,13 @@
     @include screen-lg {
       padding-bottom: spacing('lg');
     }
+
+    &.on-appear--visible {
+      animation: fadeIn--bottom 1s ease-in-out;
+    }
   }
 
   &__container {
-    @include max-column(12);
     margin: spacing('sm') spacing('sm') spacing('lg');
     display: flex;
     flex-direction: column;
@@ -62,7 +69,6 @@
 
   &__card {
     width: 100%;
-    @include max-column(4);
     display: flex;
     position: relative;
     background: $color-primary;
