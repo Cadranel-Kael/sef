@@ -28,7 +28,7 @@
   }
 
   &__home {
-    margin: spacing('sm') 0;
+    margin: spacing('sm') auto;
     height: auto;
     width: 2.5rem;
     flex: 0 0 auto;
@@ -83,6 +83,10 @@
     }
 
     &__item {
+      &--button {
+        display: flex;
+      }
+
       &--logo {
         order: -2;
         margin-top: spacing('md');
