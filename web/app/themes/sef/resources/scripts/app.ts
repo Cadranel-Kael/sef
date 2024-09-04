@@ -2,15 +2,22 @@ import domReady from '@roots/sage/client/dom-ready';
 import {Search} from "./classes/Search";
 import {BurgerMenu} from "./classes/BurgerMenu";
 import {SlideSide} from "./classes/SlideSide";
+import {NumberAnimator} from "./classes/NumberAnimator";
+import {Animation} from "./classes/Animation";
+import {settings} from "./settings";
+import {LoadingScreen} from "./classes/LoadingScreen";
 
 /**
  * Application entrypoint
  */
 domReady(async () => {
-  const search = document.querySelector('.search') as HTMLElement;
-  new Search(search, search.querySelector('#form'), search.querySelector('#search') as HTMLInputElement, search.querySelector('#button') as HTMLButtonElement);
+  const loadingScreen = new LoadingScreen('En cours de chargement...');
   new BurgerMenu(document.querySelector('#main-menu') as HTMLUListElement, document.querySelector('#burger-button') as HTMLButtonElement);
   document.querySelectorAll('[x-slide]').forEach((element) => new SlideSide(element));
+  document.querySelectorAll('.' + settings.animation.onAppear.className).forEach((element) => new Animation(element as HTMLElement, true, loadingScreen));
+  document.querySelectorAll('.number-animator').forEach((element) => {
+    new NumberAnimator(element as HTMLElement, 1000, true, loadingScreen);
+  });
 });
 
 /**

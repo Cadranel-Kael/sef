@@ -1,0 +1,56 @@
+@use '../base/_typography' as *;
+@use '../base/_colors' as *;
+@use '../base/_sizes' as *;
+
+.loading-screen {
+  overflow: hidden;
+  background: $color-black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  transition: width 2s cubic-bezier(0.77, 0, 0.175, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  gap: spacing('2xl');
+  color: $color-white;
+  @include text('large', bold);
+
+  &--hidden {
+    width: 0;
+  }
+
+  &::after {
+    margin-top: spacing('sm');
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid $color-white;
+    border-top-color: $color-primary;
+    border-radius: 50%;
+    animation: spin 0.75s ease infinite;
+    z-index: 1001;
+  }
+}
+
+.on-appear--hidden {
+  opacity: 0;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+
+
+
