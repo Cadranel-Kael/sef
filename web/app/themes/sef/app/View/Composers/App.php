@@ -32,6 +32,7 @@ class App extends Composer
             'phone' => get_field('phone', 'option'),
             'email' => get_field('email', 'option'),
             'address' => get_field('address', 'option'),
+            'addressForMaps' => $this->addressForMaps(),
             'siteLogo' => get_field('site-logo', 'option'),
             'btn1' => get_field('cta-1', 'option'),
             'btn2' => get_field('cta-2', 'option'),
@@ -57,5 +58,12 @@ class App extends Composer
         if (get_page_template_slug(get_queried_object_id()) === 'template-contact.blade.php') {
             return get_field('contact-image', 'option');
         }
+    }
+
+    public function addressForMaps()
+    {
+        $address = get_field('address', 'option');
+        $address = str_replace(' ', '+', $address);
+        return $address;
     }
 }
