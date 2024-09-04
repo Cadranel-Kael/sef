@@ -1,7 +1,7 @@
 <nav class="nav">
   <h2 class="nav__title sr-only">{{__('Menu principale')}}</h2>
   <a class="nav__home" href="{{ home_url('/') }}">
-    {!! wp_get_attachment_image($siteLogo, 'thumbnail', false, ['class' => 'nav__logo style-svg']) !!}
+    {!! wp_get_attachment_image($siteLogo, [1, 1], false, ['class' => 'nav__logo style-svg']) !!}
   </a>
   <x-burger-button id="burger-button"/>
   @if (has_nav_menu('primary_navigation'))
@@ -17,13 +17,10 @@
         </li>
       @endforeach
       @if($cta)
-        <li class="menu__item">
+        <li class="menu__item menu__item--button">
           <x-button class="menu__button" type="primary" :href="$cta['url']">{{ $cta['title'] }}</x-button>
         </li>
       @endif
-      <li class="menu__item menu__item--search">
-        <x-search class="menu__search"/>
-      </li>
     </ul>
   @endif
 
