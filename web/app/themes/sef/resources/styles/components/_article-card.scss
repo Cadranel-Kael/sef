@@ -3,11 +3,16 @@
 @use '../base/colors' as *;
 @use '../base/border' as *;
 @use '../base/icons' as *;
+@use '../base/animations' as *;
 
 .article-card {
   border-radius: $border-radius;
   filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
   background: $color-white;
+
+  &.on-appear--visible {
+    animation: fadeIn--bottom 1s ease-in-out;
+  }
 
   &:hover {
     transform: scale(1.05);
