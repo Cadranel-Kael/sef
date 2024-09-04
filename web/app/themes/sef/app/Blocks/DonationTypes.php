@@ -5,14 +5,14 @@ namespace App\Blocks;
 use Log1x\AcfComposer\Block;
 use Log1x\AcfComposer\Builder;
 
-class Feature extends Block
+class DonationTypes extends Block
 {
     /**
      * The block name.
      *
      * @var string
      */
-    public $name = 'Feature';
+    public $name = 'DonationTypes';
 
     /**
      * The block description.
@@ -102,14 +102,10 @@ class Feature extends Block
         'align_content' => false,
         'full_height' => false,
         'anchor' => false,
-        'mode' => false,
+        'mode' => true,
         'multiple' => true,
         'jsx' => true,
-        'color' => [
-            'background' => true,
-            'text' => true,
-            'gradient' => true,
-        ],
+        'color' => [],
     ];
 
     /**
@@ -128,7 +124,8 @@ class Feature extends Block
         'heading' => 'Votre titre',
         'items' => [
             'heading' => 'Votre titre',
-            'paragraph' => 'Welcome to the Feature block.',
+            'background' => 'https://via.placeholder.com/1920x1080',
+            'paragraph' => 'Welcome to the Donation Types block.',
         ]
     ];
 
@@ -155,9 +152,9 @@ class Feature extends Block
      */
     public function fields(): array
     {
-        $feature = Builder::make('feature');
+        $donationtypes = Builder::make('donationtypes');
 
-        $feature
+        $donationtypes
             ->addWysiwyg('heading', [
                 'label' => 'Titre',
                 'required' => 1,
@@ -170,14 +167,21 @@ class Feature extends Block
                 'label' => 'Titre',
                 'required' => 1,
             ])
-            ->addWysiwyg('paragraph', [
+            ->addTextarea('paragraph', [
                 'label' => 'Paragraphe',
+                'rows' => 4,
+            ])
+            ->addImage('background', [
+                'label' => 'Image de fond',
                 'required' => 1,
-                'media_upload' => 0,
+                'return_format' => 'url',
+            ])
+            ->addPageLink('link', [
+                'label' => 'Lien',
             ])
             ->endRepeater();
 
-        return $feature->build();
+        return $donationtypes->build();
     }
 
     /**
@@ -199,13 +203,14 @@ class Feature extends Block
                 $itemObj = new \stdClass();
                 the_row();
                 $itemObj->heading = get_sub_field('heading', false) ?: $this->example['items']['heading'];
-                $itemObj->paragraph = get_sub_field('paragraph', false) ?: $this->example['items']['paragraph'];
+                $itemObj->background = get_sub_field('background') ?: $this->example['items']['background'];
+                $itemObj->paragraph = get_sub_field('paragraph') ?: $this->example['items']['paragraph'];
+                $itemObj->link = get_sub_field('link') ?: null;
                 $items->push($itemObj);
             }
         } else {
             $itemObj = new \stdClass();
             $itemObj->heading = $this->example['items']['heading'];
-            $itemObj->paragraph = $this->example['items']['paragraph'];
             $items->push($itemObj);
         }
 
