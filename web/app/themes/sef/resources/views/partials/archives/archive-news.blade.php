@@ -4,7 +4,7 @@
 
 @section('content')
   <div class="news">
-    <div class="news__title"><strong>Actualités</strong></div>
+    <div class="news__title on-appear"><strong>Actualités</strong></div>
     <div class="news__container">
       @if($news->isEmpty())
         Il y a pas d’actualités à afficher.

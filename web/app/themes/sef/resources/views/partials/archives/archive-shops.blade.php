@@ -11,8 +11,8 @@
           rgba(0, 0, 0, 0.7)
         ),
         url('{{ wp_get_attachment_image_url($background, 'large') }}')" class="shops__header">
-      <span aria-hidden="true" class="shops__title">Nos <strong>Magasins</strong></span>
-      <p class="shops__description">
+      <span aria-hidden="true" class="shops__title on-appear">Nos <strong>Magasins</strong></span>
+      <p class="shops__description on-appear">
         Nous avons plusieurs magasins partenaire qui finance notre cause. Ceci est un moyen de nous soutenire.
       </p>
     </div>
@@ -21,7 +21,7 @@
         Il y a pas de magasins à afficher.
       @endif
       @foreach($shops as $shop)
-        <article class="shops__card card">
+        <article class="shops__card card on-appear">
           {!! wp_get_attachment_image($shop->image, 'medium', false, ['class' => 'card__image']) !!}
           <h2 class="card__title">{{ $shop->title }}</h2>
           <p class="card__type">{{ $shop->type }}</p>

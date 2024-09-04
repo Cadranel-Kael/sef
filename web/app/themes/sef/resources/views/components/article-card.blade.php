@@ -1,4 +1,4 @@
-<article class="article-card">
+<article class="article-card on-appear">
   {!! wp_get_attachment_image($thumbnail, 'medium', false, ['class' => 'article-card__image']) !!}
   <div class="article-card__container">
     <h2 class="article-card__title">{{ $title }}</h2>

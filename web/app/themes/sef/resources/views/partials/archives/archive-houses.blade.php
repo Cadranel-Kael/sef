@@ -4,13 +4,13 @@
 
 @section('content')
   <div class="houses">
-    <div class="houses__title">Nos <strong>hébergements</strong></div>
+    <div class="houses__title on-appear">Nos <strong>hébergements</strong></div>
     <div class="houses__container">
       @if($houses->isEmpty())
         Il y a pas d’hébergements à afficher.
       @endif
       @foreach($houses as $house)
-        <article class="houses__house house">
+        <article class="houses__house house on-appear">
           {!! wp_get_attachment_image($house->image, 'medium', false, ['class' => 'house__image']) !!}
           <div class="house__container">
             <h2 class="house__title">{{ $house->title }}</h2>
