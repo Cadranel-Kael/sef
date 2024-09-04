@@ -8,15 +8,15 @@
     <div class="shop__type">{{ $type }}</div>
     <div class="shop__container container">
       <div class="shop__contact">
-        <p class="shop__address shop__info">{{ $address }}</p>
+        <a href="https://www.google.com/maps?q={{ $locationForMaps }}" target="_blank" class="shop__address shop__info">{{ $address }}</a>
         @if($shopPhone)
-          <a href="tel:$shopPhone" class="shop__phone shop__info">{{ $shopPhone }}</a>
+          <a title="Appeler le magasin" href="tel:$shopPhone" class="shop__phone shop__info">{{ $shopPhone }}</a>
         @endif
         @if($shopWebsite)
-          <p class="shop__website shop__info">{{ $shopWebsite }}</p>
+          <a href="{{ $shopWebsite }}" target="_blank" class="shop__website shop__info">{{ $shopWebsite }}</a>
         @endif
         @if($shopEmail)
-          <p class="shop__email shop__info">{{ $shopEmail }}</p>
+          <a href="mailto:{{ $shopEmail }}" title="Envoyer un mail" class="shop__email shop__info">{{ $shopEmail }}</a>
         @endif
       </div>
       <div class="shop__schedule schedule">

@@ -33,19 +33,28 @@
 
   &__info {
     margin-bottom: spacing('sm');
+
     &:before {
       margin-right: spacing('xs');
     }
   }
 
-  &__phone {
-    color: $color-black;
-    display: inline-block;
-    &:before {
-      text-decoration: none;
-      display:inline-block;
-      @include icon('phone');
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    > * {
+      color: inherit;
+      display: inline-block;
+
+      &:before {
+        text-decoration: none;
+        display: inline-block;
+      }
     }
+  }
+
+  &__phone:before {
+    @include icon('phone');
   }
 
   &__email:before {
@@ -54,10 +63,6 @@
 
   &__address:before {
     @include icon('location');
-  }
-
-  &__email:before {
-    @include icon('email');
   }
 
   &__image {
