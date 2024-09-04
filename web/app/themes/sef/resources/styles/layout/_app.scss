@@ -15,9 +15,9 @@ html, body {
 
   &__title {
     display: block;
+    margin: spacing('xxl') auto spacing('sm');
     @include width-column(12);
     @include heading(3);
-    margin: spacing('xxl') auto spacing('sm');
 
     @include screen-lg {
       @include heading(2);
