@@ -34,7 +34,7 @@ class ArchiveNews extends Composer
             $newsObject->title = get_the_title($news);
             $newsObject->thumbnail = get_field('thumbnail', $news);
             $newsObject->article = get_field('article', $news);
-            $newsObject->type = get_the_terms(get_the_ID(), 'custom_category')[0]->name;
+            $newsObject->type = get_the_terms(get_the_ID(), 'custom_category')[0]->name ?? 'Nouvelles';
             $newsObject->date = get_field('date', $news);
             $newsObject->link = get_permalink($news);
             return $newsObject;

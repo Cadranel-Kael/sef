@@ -27,16 +27,22 @@ export class Animation {
     window.addEventListener('scroll', this.onScroll);
   }
 
+  private show() {
+    this.onTransitionEnd();
+    this.element.classList.add(`${this.onAppearClassName}--visible`);
+    this.start();
+  }
+
   onLoad = () => {
     this.element.classList.add(`${this.onAppearClassName}--hidden`);
     if (this.isElementInViewport(this.element)) {
       if (this.loadingScreen) {
         this.loadingScreen.waitForLoading().then(() => {
-          this.element.classList.add(`${this.onAppearClassName}--visible`);
-          this.start();
-          this.element.addEventListener('animationend', this.onTransitionEnd);
+          this.show();
+          return;
         });
       }
+      this.show();
     }
   }
 
@@ -44,11 +50,11 @@ export class Animation {
     if (this.isElementInViewport(this.element) && !this.element.classList.contains(`${this.onAppearClassName}--visible`)) {
       if (this.loadingScreen) {
         this.loadingScreen.waitForLoading().then(() => {
-          this.element.classList.add(`${this.onAppearClassName}--visible`);
-          this.start();
-          this.element.addEventListener('animationend', this.onTransitionEnd);
+          this.show();
+          return;
         });
       }
+      this.show();
     }
   }
 
@@ -59,10 +65,10 @@ export class Animation {
   private isElementInViewport(element: Element) {
     const rect = element.getBoundingClientRect();
     return (
-      rect.top >= -0.4 &&
-      rect.left >= -0.4 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + 0.4 &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth) + 0.4
+      rect.top >= -0.6 &&
+      rect.left >= -0.6 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + 0.6 &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth) + 0.6
     );
   }
 

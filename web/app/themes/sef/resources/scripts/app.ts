@@ -11,12 +11,11 @@ import {LoadingScreen} from "./classes/LoadingScreen";
  * Application entrypoint
  */
 domReady(async () => {
-  const loadingScreen = new LoadingScreen('En cours de chargement...');
   new BurgerMenu(document.querySelector('#main-menu') as HTMLUListElement, document.querySelector('#burger-button') as HTMLButtonElement);
   document.querySelectorAll('[x-slide]').forEach((element) => new SlideSide(element));
-  document.querySelectorAll('.' + settings.animation.onAppear.className).forEach((element) => new Animation(element as HTMLElement, true, loadingScreen));
+  document.querySelectorAll('.' + settings.animation.onAppear.className).forEach((element) => new Animation(element as HTMLElement, true));
   document.querySelectorAll('.number-animator').forEach((element) => {
-    new NumberAnimator(element as HTMLElement, 1000, true, loadingScreen);
+    new NumberAnimator(element as HTMLElement, 1000, true);
   });
 });
 

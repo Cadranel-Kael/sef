@@ -149,6 +149,7 @@ class Latest extends Block
     {
         return [
             'posts' => $this->posts(),
+            'link' => get_field('link') ?: '#',
         ];
     }
 
@@ -191,6 +192,12 @@ class Latest extends Block
     public function fields()
     {
         $latest = Builder::make('latest');
+
+        $latest
+            ->addPageLink('link', [
+                'label' => 'Page d\'actualités',
+            ]);
+
         return $latest->build();
     }
 }

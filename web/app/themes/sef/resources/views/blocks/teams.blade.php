@@ -3,7 +3,7 @@
   @while($teams->have_posts())
     @php($teams->the_post())
     @php($members = get_field('member', get_the_ID()))
-    <div class="teams__team team">
+    <section class="teams__team team">
       <h3 class="team__title">{!! get_the_title() !!}</h3>
       @if($members)
         <ul class="team__members">
@@ -17,7 +17,7 @@
       @else
         <div>{{ __('Il y a aucun membre dans cette equipe') }}</div>
       @endif
-    </div>
+    </section>
   @endwhile
 
   <div class="teams__container">

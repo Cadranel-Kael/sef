@@ -1,4 +1,4 @@
-<div class="{{ $block->classes }} block-mission block-mission--{{ $block->style }}" style="{{ $block->inlineStyle }}">
+<section class="{{ $block->classes }} block-mission block-mission--{{ $block->style }}" style="{{ $block->inlineStyle }}">
   <h2 class="block-mission__title on-appear">{!! $heading !!}</h2>
   <p class="block-mission__description on-appear">{!! $description !!}</p>
   <ul class="block-mission__list">
@@ -12,4 +12,4 @@
       </li>
     @endforeach
   </ul>
-</div>
+</section>

@@ -13,5 +13,5 @@
         :link="$post->link"/>
     @endforeach
   </div>
-  <x-button class="block-latest__link" href="{{ home_url('/actualites') }}" type="primary">Voir toutes les actualités</x-button>
+  <x-button class="block-latest__link" href="{{ $link }}" type="primary">Voir toutes les actualités</x-button>
 </div>

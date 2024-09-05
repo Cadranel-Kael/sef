@@ -1,17 +1,15 @@
-@dd($title, $date, $articles, $latest);
 @extends('layouts.app', [
-  'title' => $title,
+  'title' => get_the_title(),
   ])
-
 @section('content')
   <div class="news-article">
     <div class="news-article__container">
-      <span class="news-article__title">{{ $title }}</span>
+      <span class="news-article__title">{!! get_the_title() !!}</span>
       <span class="news-article__date">{{ $date }}</span>
       @if($articles)
         @foreach($articles as $article)
           <div class="news-article__paragraph paragraph">
-            <h2 class="paragraph__title">{{ $article->title }}</h2>
+            <h2 class="paragraph__title">{!! $article->title !!}</h2>
             <div class="paragraph__container">
               @if($article->text)
                 {!! $article->text !!}

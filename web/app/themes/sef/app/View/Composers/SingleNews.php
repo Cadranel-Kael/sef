@@ -60,7 +60,7 @@ class SingleNews extends Composer
         return collect($wpQuery->posts)->map(function ($post) {
             $postObject = new \stdClass();
             $postObject->title = get_the_title();
-            $postObject->type = get_the_terms(get_the_ID(), 'custom_category')[0]->name;
+            $postObject->type = get_the_terms(get_the_ID(), 'custom_category')[0]->name ?? 'Nouvelles';
             $postObject->thumbnail = get_field('thumbnail', $post->ID);
             $postObject->date = get_field('date', $post);
             $postObject->link = get_permalink($post->ID);

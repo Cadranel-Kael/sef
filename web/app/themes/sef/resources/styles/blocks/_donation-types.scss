@@ -39,6 +39,10 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
+
+    &.on-appear--visible>.block-donation-types__item {
+      animation: fadeIn--bottom 1s ease-in-out;
+    }
   }
 
   &__item {
@@ -62,9 +66,6 @@
         opacity: 1;
         transform: translateY(0);
       }
-    }
-    &.on-appear--visible {
-      animation: fadeIn--bottom 1s ease-in-out;
     }
 
     @include screen-lg {
